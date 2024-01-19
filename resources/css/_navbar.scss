@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2, h3, a {
+    color: #4375a7;
+}
+
+.main-nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contain-logo{
+    display: flex;
+    justify-content: space-between;
+    .link-logo{
+        font-size: small;
+    }
+}
+
+.title {
+    margin: 0;
+    font-size: 1.45em;
+    display: flex; /* Ajout de la propriété flex pour aligner le texte et l'image horizontalement */
+    align-items: center;
+}
+
+
+.logo-val {
+    max-width: 40%; // Assurer la largeur maximale de l'image
+    height: auto; // Assurer la hauteur automatique pour la responsivité
+    display: block; // Supprimer l'espace sous l'image
+}
+
+.main-nav {
+    margin-top: 5px;
+}
+
+.button-sidebar {
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+        display: block;
+        margin-right: 20px;
+    }
+}
+
+.title a, .main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+}
+
+.main-nav a {
+    color: #205589;
+    font-size: .99em;
+}
+
+.main-nav a:hover {
+    color: #718daa;
+}
+
+$header-height: 75px;
+
+.header {
+    height: $header-height;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0.125rem 0rem 0px rgba(0, 0, 0, 0.075);
+    transition: height 0.4s cubic-bezier(.68, -0.55, .27, 1.55);
+
+    &.scrolled {
+        height: $header-height - 10px;
+        box-shadow: 0 0.125rem 2rem 2px rgba(0, 0, 0, 0.100);
+    }
+
+    &-space {
+        height: $header-height;
+    }
+
+    @media screen and (max-width: 1024px) {   
+        .main-nav {
+            display: none !important;
+        }
+    }
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+    .header, .main-nav {
+        display: flex;
+    }
+
+    .header {
+        align-items: center;
+        justify-content: space-between;
+
+        .header {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
