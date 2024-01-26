@@ -3,4 +3,8 @@
 @section('body')
 <x-navbar/>
 
+<section>
+    <img src="garage.jpeg" alt="">
+</section>
+
 @endsection

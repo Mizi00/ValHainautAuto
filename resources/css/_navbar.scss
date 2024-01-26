@@ -1,43 +1,33 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
-h2, h3, a {
-    color: #4375a7;
+.logo {
+    max-width: 150px;
+    height: auto;
+    
 }
 
-.main-nav {
-    list-style: none;
+h2,
+h3,
+a {
+    color: black;
 }
 
 a {
     text-decoration: none;
 }
 
-.contain-logo{
-    display: flex;
-    justify-content: space-between;
-    .link-logo{
-        font-size: small;
-    }
-}
-
-.title {
+.logo {
     margin: 0;
     font-size: 1.45em;
-    display: flex; /* Ajout de la propriété flex pour aligner le texte et l'image horizontalement */
-    align-items: center;
-}
-
-
-.logo-val {
-    max-width: 40%; // Assurer la largeur maximale de l'image
-    height: auto; // Assurer la hauteur automatique pour la responsivité
-    display: block; // Supprimer l'espace sous l'image
 }
 
 .main-nav {
     margin-top: 5px;
+    margin-right: 50px;
+    list-style-type: none;
 }
 
 .button-sidebar {
@@ -46,10 +36,12 @@ a {
     @media screen and (max-width: 1024px) {
         display: block;
         margin-right: 20px;
+
     }
 }
 
-.title a, .main-nav a {
+
+.main-nav a {
     padding: 10px 15px;
     text-transform: uppercase;
     text-align: center;
@@ -57,12 +49,12 @@ a {
 }
 
 .main-nav a {
-    color: #205589;
+    color: black;
     font-size: .99em;
 }
 
 .main-nav a:hover {
-    color: #718daa;
+    color: rgba(238, 59, 59, 0.724);
 }
 
 $header-height: 75px;
@@ -72,9 +64,11 @@ $header-height: 75px;
     padding-top: .5em;
     padding-bottom: .5em;
     background-color: white;
-    position: fixed;
+    //position: fixed;
     width: 100%;
+    //box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0 0.125rem 0rem 0px rgba(0, 0, 0, 0.075);
+    //border-radius: 5px;
     transition: height 0.4s cubic-bezier(.68, -0.55, .27, 1.55);
 
     &.scrolled {
@@ -98,7 +92,9 @@ $header-height: 75px;
 ==================================== */
 
 @media (min-width: 769px) {
-    .header, .main-nav {
+
+    .header,
+    .main-nav {
         display: flex;
     }
 
@@ -112,6 +108,7 @@ $header-height: 75px;
             max-width: 1150px;
         }
     }
+
 }
 
 @media (max-width: 769px) {
@@ -127,4 +124,5 @@ $header-height: 75px;
         flex-direction: row;
         justify-content: space-between;
     }
-}
+
+}   
