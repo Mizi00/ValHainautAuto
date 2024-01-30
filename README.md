@@ -1,5 +1,7 @@
 # VALHAINAUT AUTO - Site Vitrine
 
+![Laravel](https://img.shields.io/badge/Laravel-Framework-red)
+
 Bienvenue dans le référentiel du projet VALHAINAUT AUTO, un site vitrine pour un garage automobile réalisé avec Laravel.
 
 ## À propos du projet
