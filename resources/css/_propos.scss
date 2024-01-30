@@ -1,0 +1,25 @@
+.propos {
+    margin: 2rem 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+    border-bottom: 1px solid black; //Voir bug border pour la rendre plus petite    
+    
+    .propos-inner {
+        margin-bottom: 2rem;
+
+
+        h1 {
+            margin: 15px 0;
+            font-size: 45px;
+        }
+
+        p{
+            font-size: 10px;
+        }
+    }
+}

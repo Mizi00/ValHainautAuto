@@ -1,7 +1,7 @@
 <header class="header">
     <h1 class="logo"><a href="#">Valhainaut <span>Auto</span></a></h1>
     <ul class="main-nav">
-        <li><a href="#">Qui suis-je ?</a></li>
+        <li><a href="#">Qui sommes-nous</a></li>
         <li><a href="#">Nos services</a></li>
         <li><a href="#">Véhicules</a></li>
         <li><a href="#">Contact</a></li>
