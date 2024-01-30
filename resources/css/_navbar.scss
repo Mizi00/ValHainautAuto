@@ -1,0 +1,136 @@
+$red-color : #e92001;
+$hoverTransition : all 0.5s ease-in-out;
+
+
+h2,
+h3,
+a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+        transition: $hoverTransition;
+    }
+
+    span {
+        color: rgba(138, 0, 0, 0.815);
+    }
+}
+
+
+.dc-button {
+    svg {
+        font-size: 25px;
+    }
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.45em;
+    font-weight: 800;
+    font-size: 180%;
+}
+
+.main-nav {
+    margin-top: 5px;
+    margin-right: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.button-sidebar {
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+        display: block;
+        margin-right: 20px;
+
+    }
+}
+
+.logo a,
+.main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+}
+
+.main-nav a {
+    color: black;
+    font-size: .99em;
+}
+
+.main-nav a:hover {
+    color: #C73E1D;
+}
+
+$header-height: 75px;
+
+.header {
+    height: $header-height;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    //box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0.125rem 0rem 0px rgba(0, 0, 0, 0.075);
+    //border-radius: 5px;
+    transition: height 0.4s cubic-bezier(.68, -0.55, .27, 1.55);
+
+    &.scrolled {
+        height: $header-height - 10px;
+        box-shadow: 0 0.125rem 2rem 2px rgba(0, 0, 0, 0.100);
+    }
+
+    &-space {
+        height: $header-height;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .main-nav {
+            display: none !important;
+        }
+    }
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+    .header,
+    .main-nav {
+        display: flex;
+    }
+
+    .header {
+        align-items: center;
+        justify-content: space-between;
+
+        .header {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;
+        }
+    }
+
+}
+
+@media (max-width: 769px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}

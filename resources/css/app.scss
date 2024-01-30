@@ -1,0 +1,23 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap';
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.925rem;
+    margin: 0;
+    
+     ul {
+        list-style-type: none
+     }
+}
+
+
+
+
+@import 'navbar';
+@import 'hero';
