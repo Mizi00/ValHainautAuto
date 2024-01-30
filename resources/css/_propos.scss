@@ -11,10 +11,15 @@
     
     .propos-inner {
         margin-bottom: 2rem;
+
+        .propos-text {
+            max-width: 1800px;
+        }
         
         h1 {
-            margin: 15px 0;
+            margin: 7rem 0;
             font-size: 45px;
+            margin-bottom: 4rem;
 
             &::after{
                 content: "";
@@ -29,8 +34,6 @@
         p{
             font-size: 10px;
         }
-
-
 
         //Pour faire un ligne de séparation pour stylisé le site
         &::after{

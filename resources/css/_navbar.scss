@@ -1,6 +1,5 @@
 $red-color : #e92001;
-$hoverTransition : all 0.5s ease-in-out;
-
+$hoverTransition : all 0.35s ease-in-out;
 
 h2,
 h3,
@@ -16,7 +15,6 @@ a {
         color: rgba(138, 0, 0, 0.815);
     }
 }
-
 
 .dc-button {
     svg {
