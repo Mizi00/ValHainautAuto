@@ -1,5 +1,5 @@
-$red-color : #e92001bd;
-$hoverTransition : all 0.5s ease-in-out;
+$red-color: #e92001bd;
+$hoverTransition: all 0.5s ease-in-out;
 
 .contact {
     border-radius: 5px;
@@ -8,17 +8,29 @@ $hoverTransition : all 0.5s ease-in-out;
 
     max-width: 800px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
+
+    form {
+        margin: 0 auto;
+    }
+
+    h1 {
+        margin: 2rem 0;
+    }
+
 
     &-np {
         display: flex;
         gap: 5rem;
         align-items: center;
+        
 
 
         label {
-            width: auto;
+            width: 100%;
         }
     }
 
@@ -50,7 +62,7 @@ $hoverTransition : all 0.5s ease-in-out;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-    
+
         &:hover {
             background-color: #e920017f;
             transition: $hoverTransition;

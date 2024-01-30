@@ -7,19 +7,40 @@
     text-align: center;
 
 
-    border-bottom: 1px solid black; //Voir bug border pour la rendre plus petite    
+    //border-bottom: 1px solid black; //Voir bug border pour la rendre plus petite    
     
     .propos-inner {
         margin-bottom: 2rem;
-
-
+        
         h1 {
             margin: 15px 0;
             font-size: 45px;
+
+            &::after{
+                content: "";
+                height: 1px;
+                width: 15%;
+                margin:  2rem auto;
+                display: block;
+                background-color: black;
+            }
         }
 
         p{
             font-size: 10px;
         }
+
+
+
+        //Pour faire un ligne de séparation pour stylisé le site
+        &::after{
+            content: "";
+            height: 1px;
+            width: 30%;
+            margin:  2rem auto;
+            display: block;
+            background-color: black;
+        }
     }
+
 }

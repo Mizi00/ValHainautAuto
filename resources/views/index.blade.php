@@ -7,12 +7,12 @@
     <div class="hero-inner">
         <h1>VALHAINAUT AUTO</h1>
         <h4>Concessionnaire. Mécanique automobile. Service carte grise. Depuis 2015</h4>
-        <a class="button-hero" href="#">COMMENCER</a>
+        <a class="button-hero" href="#propos-id">COMMENCER</a>
     </div>
 </section>
 
-<section class="propos">
-    <div class="propos-inner">
+<section class="propos" >
+    <div class="propos-inner" id="propos-id">
         <h1>Qui Sommes-Nous ?</h1>
         <div class="propos-text">
             Quam ob rem ut ii qui superiores sunt submittere se debent in amicitia, sic quodam modo inferiores extollere. Sunt enim quidam qui molestas amicitias faciunt, cum ipsi se contemni putant; quod non fere contingit nisi iis qui etiam contemnendos se arbitrantur; qui hac opinione non modo verbis sed etiam opere levandi sunt.
@@ -31,6 +31,7 @@
 </section>
 
 <div class="contact">
+    <h1>Contactez-Nous !</h1>
     <form action="">
         <div class="contact-np">
             <label for="">Prénom: <input type="text" name="prenom" id="prenom"></label>
