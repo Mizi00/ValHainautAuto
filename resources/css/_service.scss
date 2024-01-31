@@ -1,0 +1,50 @@
+.service {
+    padding: 1em 0;
+    background-color: #edede9;
+
+    .service-bk {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin: 2rem 10px;
+    }
+
+    .service-text {
+        text-align: center;
+        max-width: 500px;
+    }
+
+
+    .service-inner {
+        text-align: center;
+
+        i {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+            color: rgba(168, 2, 2, 0.724);
+            ;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+
+
+}
+
+
+
+.service-bolder {
+    &::after {
+        content: "";
+        height: 1px;
+        width: 15%;
+        margin: 3rem auto;
+        display: block;
+        background-color: $red-color;
+    }
+}
