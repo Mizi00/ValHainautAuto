@@ -13,11 +13,11 @@ $hoverTransition: all 0.5s ease-in-out;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: $hoverTransition;
     margin-top: 6rem;
 
     &:hover {
         box-shadow: 0 8px 16px 0 rgba(	30.165, -1.925, -14.942, 0.2);
+        transition: $hoverTransition;
         
     }
 

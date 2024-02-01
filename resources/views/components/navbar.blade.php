@@ -1,5 +1,8 @@
 <header class="header">
-    <h1 class="logo"><a href="{{ route('home') }}">Valhainaut <span>Auto</span></a></h1>
+    <div class="header-logo">
+        <h1 class="logo"><a href="{{ route('home') }}"><img src="logo-val.png" alt=""><div>Valhainaut <span>Auto</span></div></a></h1>
+    </div>  
+    
     <ul class="main-nav">
         <li><a href="#">Qui sommes-nous</a></li>
         <li><a href="#">Nos services</a></li>
