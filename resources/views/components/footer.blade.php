@@ -10,8 +10,10 @@
     </div>
     <div class="footer-inner-right">
         <h2>Nos Réseaux</h2>
+        <div>
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-brands fa-twitter"></i>
+        </div>
     </div>
 </footer>
