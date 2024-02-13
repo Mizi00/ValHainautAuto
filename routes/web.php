@@ -17,3 +17,4 @@ Route::view('/', 'index')->name('home');
 
 Route::view('login', 'admin.login')->name('login');
 Route::view('contact', 'client.contact')->name('contact');
+Route::view('voiture', 'client.voiture')->name('voiture');

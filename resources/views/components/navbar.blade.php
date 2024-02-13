@@ -4,9 +4,9 @@
     </div>  
     
     <ul class="main-nav">
-        <li><a href="#">Qui sommes-nous</a></li>
-        <li><a href="#">Nos services</a></li>
-        <li><a href="#">Véhicules</a></li>
+        <li><a href="{{ route('home') }}#propos-id">Qui sommes-nous</a></li>
+        <li><a href="{{ route('home') }}#service-id">Nos services</a></li>
+        <li><a href="{{ route('voiture') }}">Véhicules</a></li>
         <li><a href="{{ route('contact') }}">Contact</a></li>
     </ul>
     <div class="button-sidebar" id="button-sidebar"><a><i class="fa-solid fa-bars"></i></a></div>

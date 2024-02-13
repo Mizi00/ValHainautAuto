@@ -24,8 +24,8 @@
 </section>
 
 <!--SECTION SERVICES-->
-<section class="service">
-    <div class="service-bk">
+<section class="service" id="service-id">
+    <div class="service-bk" >
         <div class="service-inner">
             <i class="fa-solid fa-handshake-simple" id="icon_handshake"></i>
             <h1>Service n°1</h1>
