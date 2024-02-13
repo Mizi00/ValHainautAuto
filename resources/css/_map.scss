@@ -7,7 +7,19 @@
         gap: 5rem;
 
         h1 {
+
+            width: 100%;
+            text-align: center;
+            padding-top: 5rem;
             font-size: $bigTitle;
+            &::after{
+                content: "";
+                height: 2.5px;
+                width: 8%;
+                margin:  2rem auto;
+                display: block;
+                background-color: $red-color;
+            }
         }
     }
     iframe {

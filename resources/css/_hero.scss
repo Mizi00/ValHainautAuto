@@ -7,7 +7,7 @@
     text-align: center;
 
     //background
-    background-image: url('garage.jpeg');
+    background: linear-gradient( rgba(0, 0, 0, 0.411), rgba(0, 0, 0, 0.411) ), url('garage.jpeg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -27,15 +27,16 @@
         display: block;
         width: 200px;
         color: #ffff;
+        background-color: black;
 
         &:hover {
             transition: $hoverTransition;
-            color: black;
+            color: #ffff;
             border-color: black;
-            background-color: #ffff;
+            background-color: $black-color;
         }
 
-        border: 3px solid #ffff ;
+        border: 2px solid black ;
         border-radius: 10px;
         padding: 1em;
         margin-top: 50px;

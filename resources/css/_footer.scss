@@ -4,10 +4,42 @@ footer {
     padding: 35px 35px;
     background-color: black;
     color: #ffff;
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+
+        .footer-inner-center {
+            display: flex;
+            height: 80px;
+            align-items: center;
+        }
+
+        .footer-inner-left {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            h2::after {
+                width: 100px !important;
+                margin: 10px auto !important;
+            }
+        }
+
+        .footer-inner-right {
+            h2::after {
+                width: 100px !important;
+                margin: 10px auto !important;
+            }
+        }
+
+
+    }
+
     a {
         color: #ffff;
         text-decoration: underline;
     }
+
     .footer-inner-right {
 
         display: flex;
@@ -18,7 +50,32 @@ footer {
         div {
             display: flex;
             gap: 10px;
+
+            #facebook:hover {
+                color: #4267B2;
+                transition: all 0.355s ease-in-out;
+                cursor: pointer;
+            }
+
+            #instagram:hover {
+                color: #bb5a7a;
+                transition: all 0.355s ease-in-out;
+                cursor: pointer;
+            }
+
+            #twitter:hover {
+                color: #1DA1F2;
+                transition: all 0.355s ease-in-out;
+                cursor: pointer;
+            }
+
+            #snapchat:hover {
+                color: #FFFC00;
+                transition: all 0.355s ease-in-out;
+                cursor: pointer;
+            }
         }
+
         h2 {
             color: #ffff;
             font-size: 30px;
@@ -27,9 +84,10 @@ footer {
                 content: "";
                 height: 1px;
                 width: 40%;
-                margin: 10px 60px;
+                margin: 10px 100px;
                 display: block;
                 background-color: #ffff;
+                text-align: center;
             }
         }
 
@@ -39,12 +97,18 @@ footer {
     }
 
     .footer-inner-center {
-        margin-top: 50px;
+        margin-top: 100px;
+        margin-right: 165px;
+
+        span {
+            color: rgba(128, 128, 128, 0.719);
+        }
     }
 
     .footer-inner-left {
         display: flex;
         flex-direction: column;
+
         span {
             font-size: 15px;
         }
