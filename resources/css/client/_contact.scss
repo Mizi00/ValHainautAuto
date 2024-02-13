@@ -1,9 +1,6 @@
-$red-color: #e92001bd;
-$hoverTransition: all 0.5s ease-in-out;
-
 .contact {
     border-radius: 5px;
-    background-color: $black-color;
+    background-color: #fff;
     padding: 20px;
 
     max-width: 800px;
@@ -15,6 +12,8 @@ $hoverTransition: all 0.5s ease-in-out;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin-top: 6rem;
 
+    margin-bottom: 100px;
+
     &:hover {
         box-shadow: 0 8px 16px 0 rgba(	30.165, -1.925, -14.942, 0.2);
         transition: $hoverTransition;
@@ -23,12 +22,21 @@ $hoverTransition: all 0.5s ease-in-out;
 
     form {
         margin: 0 auto;
-        color: #ffff;
+        color: $black-color;
     }
 
     h1 {
-        margin: 2rem 0;
-        color: #ffff;
+        margin-top: 30px;
+        color: $black-color;
+
+        &::after{
+            content: "";
+            height: 1.5px;
+            width: 100px;
+            margin:  2rem auto;
+            display: block;
+            background-color: $black-color;
+        }
     }
 
 
@@ -62,7 +70,7 @@ $hoverTransition: all 0.5s ease-in-out;
         /* Bottom margin */
         resize: vertical;
         /* Allow the user to vertically resize the textarea (not horizontally) */
-        background-color: #FCFAF9   ;
+        background-color: #Fff   ;
 
     }
 
@@ -74,11 +82,11 @@ $hoverTransition: all 0.5s ease-in-out;
         border-radius: 4px;
         cursor: pointer;
         width: 100%;
+        margin-bottom: 15px;
 
         &:hover {
-            background-color: #f5f1ed;
+            background-color: $black-color;
             transition: $hoverTransition;
-            color: black;
         }
     }
 

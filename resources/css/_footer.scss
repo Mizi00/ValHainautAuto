@@ -1,7 +1,7 @@
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 35px 35px;
+    padding: 15px 35px;
     background-color: black;
     color: #ffff;
 
@@ -10,8 +10,9 @@ footer {
 
         .footer-inner-center {
             display: flex;
-            height: 80px;
-            align-items: center;
+            flex-direction: column;
+            margin: 25px 0;
+            align-items: center !important;
         }
 
         .footer-inner-left {
@@ -26,8 +27,9 @@ footer {
         }
 
         .footer-inner-right {
+            align-items: center !important;
             h2::after {
-                width: 100px !important;
+                width: 150px !important;
                 margin: 10px auto !important;
             }
         }
@@ -44,12 +46,13 @@ footer {
 
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        align-items: flex-end;
+        //gap: 20px;
 
         div {
             display: flex;
             gap: 10px;
+            align-items: center;
 
             #facebook:hover {
                 color: #4267B2;
@@ -74,6 +77,19 @@ footer {
                 transition: all 0.355s ease-in-out;
                 cursor: pointer;
             }
+
+            svg {
+                width: 105px;
+                height: 85px;
+                fill: #ffff;
+                cursor: pointer;
+                margin-bottom: 2px;
+                margin-left: -5px;
+                &:hover {
+                    transition: all 0.355s ease-in-out;
+                    fill: #f46c24;
+                }
+            }
         }
 
         h2 {
@@ -97,8 +113,8 @@ footer {
     }
 
     .footer-inner-center {
-        margin-top: 100px;
-        margin-right: 165px;
+        display: flex;
+        align-items: center;
 
         span {
             color: rgba(128, 128, 128, 0.719);
