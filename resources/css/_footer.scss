@@ -43,16 +43,15 @@ footer {
     }
 
     .footer-inner-right {
-
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        //gap: 20px;
 
         div {
             display: flex;
             gap: 10px;
             align-items: center;
+            margin-right: 15px;
 
             #facebook:hover {
                 color: #4267B2;
