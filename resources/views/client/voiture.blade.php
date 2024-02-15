@@ -18,6 +18,13 @@
                 <div class="card-content">
                     <div>
                         <h2 class="card-title">{{ $annonce->titre }}</h2>
+                        <ul class="card-list">
+                            <li>Modèle: {{ $annonce->modele }}</li>
+                            <li>Année: {{ $annonce->annee }}</li>
+                            <li>Cv: {{ $annonce->chevaux }}</li>
+                            <li>Carburant: {{ $annonce->typeFuel }}</li>
+                            <li>Montant: {{ $annonce->prix }} €</li>
+                        </ul>
                         <p class="card-text">{{ Str::limit($annonce->description, 50) }}</p>
                     </div>
 
