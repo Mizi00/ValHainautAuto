@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\VoitureController;
 
 /*
@@ -16,6 +17,10 @@ use App\Http\Controllers\VoitureController;
 
 Route::view('/', 'index')->name('home');
 
-Route::view('login', 'admin.login')->name('login');
+Route::prefix('/login')->middleware('guest')->group(function(){
+    Route::get('/', [AuthController::class, 'index'])->name('login');
+    Route::post('/', [AuthController::class, 'authenticate']);
+});
+
 Route::view('contact', 'client.contact')->name('contact');
 Route::get('voiture', [VoitureController::class, 'index'])->name('voiture');
