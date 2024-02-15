@@ -14,7 +14,7 @@
         @foreach($annonces as $annonce)
         <li class="cards-item">
             <div class="card">
-                <div class="card-image"><img src="logo-val.png" alt=""></div>
+                <div class="card-image"><img src="https://s.tmimgcdn.com/scr/1200x750/348500/modele-de-conception-de-logo-de-voiture-unique-attrayant-et-accrocheur_348510-original.jpg" alt=""></div>
                 <div class="card-content">
                     <div>
                         <h2 class="card-title">{{ $annonce->titre }}</h2>
@@ -28,7 +28,7 @@
                         <p class="card-text">{{ Str::limit($annonce->description, 50) }}</p>
                     </div>
 
-                    <a href="https://www.leboncoin.fr/boutique/428532/val_hainaut_auto.htm" target="_blank"><button class="card-button">Voir Plus</button></a>
+                    <a href="{{ $annonce->url }}" target="_blank"><button class="card-button">Voir Plus</button></a>
                 </div>
             </div>
         </li>

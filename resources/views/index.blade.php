@@ -5,7 +5,7 @@
 <!--SECTION HERO-->
 <section class="hero">
     <div class="hero-inner">
-        <h1>VALHAINAUT AUTO</h1>
+        <h1>VAL HAINAUT AUTO</h1>
         <h4>Concessionnaire. Mécanique automobile. Service carte grise. Depuis 2015</h4>
         <a class="button-hero" href="#propos-id">COMMENCER</a>
     </div>

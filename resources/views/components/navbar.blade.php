@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header-logo">
-        <h1 class="logo"><a href="{{ route('home') }}"><img src="logo-val.png" alt=""><div>Valhainaut <span>Auto</span></div></a></h1>
+        <h1 class="logo"><a href="{{ route('home') }}"><img src="logo-val.png" alt=""><div>Val hainaut <span>Auto</span></div></a></h1>
     </div>  
     
     <ul class="main-nav">

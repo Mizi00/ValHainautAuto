@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('annee', 20);
             $table->string('chevaux', 20);
             $table->string('typeFuel', 50);
+            $table->string('url', 100);
             $table->string('description', 300);
 
             //clé étrangère 

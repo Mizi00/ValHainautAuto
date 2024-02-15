@@ -31,6 +31,7 @@
         display: flex;
         padding: 1rem;
         max-width: 375px;
+        width: 100%;
 
         .card {
             background-color: #ffff;
@@ -39,6 +40,19 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
+
+            .card-image{
+                border: 5px solid black;
+                display: flex;
+                
+                justify-content: center;
+                
+                img{
+                    max-width: 375px;
+                    max-height: 240px;
+                    width: 100%;
+                }
+            }
 
             .card-content {
                 display: flex;

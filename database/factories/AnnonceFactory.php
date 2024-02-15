@@ -24,10 +24,11 @@ class AnnonceFactory extends Factory
             'prix' => fake()->randomFloat(2, 1, 10000),
             'description' => fake()->text(50),
             'idUser' => 1,
-            'modele' =>fake()->randomElement($marquesVoitures),
+            'modele' => fake()->randomElement($marquesVoitures),
             'annee' => fake()->numberBetween(1990, 2024),
             'chevaux' => fake()->randomNumber(1, 500),
-            'typeFuel' =>fake()->randomElement($typesCarburant)
+            'typeFuel' => fake()->randomElement($typesCarburant),
+            'url' => fake()->imageUrl()
         ];
     }
 }

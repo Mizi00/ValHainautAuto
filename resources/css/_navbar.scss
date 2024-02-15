@@ -41,8 +41,9 @@ a {
 .main-nav a {
     padding: 10px 15px;
     text-transform: uppercase;
-    text-align: center;
-    display: block;
+    letter-spacing: 1px;
+    //text-align: center;
+    //display: block;
 }
 
 .main-nav a {
@@ -51,7 +52,7 @@ a {
 }
 
 .main-nav a:hover {
-    color: rgb(242, 41, 41);
+    color: black;
 }
 
 $header-height: 75px;
@@ -74,9 +75,9 @@ $header-height: 75px;
         gap: 30px;
         text-align: center;
 
-        span:hover{
+        span:hover {
             transition: $hoverTransition;
-            color: rgba(138, 0, 0, 0.815); 
+            color: rgba(138, 0, 0, 0.815);
         }
 
         img {
