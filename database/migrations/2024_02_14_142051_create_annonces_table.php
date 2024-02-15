@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('titre', 255);
             $table->double('prix', 6, 2);
-            $table->string('description', 1000);
+            $table->string('description', 300);
 
             //clé étrangère 
             $table->unsignedBigInteger('idUser');

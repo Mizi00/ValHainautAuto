@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VoitureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,4 @@ Route::view('/', 'index')->name('home');
 
 Route::view('login', 'admin.login')->name('login');
 Route::view('contact', 'client.contact')->name('contact');
-Route::view('voiture', 'client.voiture')->name('voiture');
+Route::get('voiture', [VoitureController::class, 'index'])->name('voiture');
