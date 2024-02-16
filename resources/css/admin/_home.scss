@@ -1,0 +1,12 @@
+.main-home-admin {
+    margin-left: $sidebar-width;
+
+    .header-home-admin {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0;
+        background-color: $black-color;
+        color: #fff;
+    }
+}

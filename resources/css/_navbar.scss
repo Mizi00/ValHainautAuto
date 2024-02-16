@@ -5,7 +5,7 @@ a {
     text-decoration: none;
 
     &:hover {
-        transition: $hoverTransition;
+        transition: all 0.3s ease-in-out;
     }
 }
 
@@ -61,12 +61,10 @@ $header-height: 75px;
     height: $header-height;
     padding-top: .5em;
     padding-bottom: .5em;
-    background-color: $black-color;
+    background-color: $default-color;
     position: fixed;
     width: 100%;
-    //box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0 .125rem 0rem 0px rgba(0, 0, 0, 0.075);
-    //border-radius: 5px;
     transition: height .4s cubic-bezier(.68, -0.55, .27, 1.55);
 
     &-logo a {
@@ -76,7 +74,7 @@ $header-height: 75px;
         text-align: center;
 
         span:hover {
-            transition: $hoverTransition;
+            transition: all 0.3s ease-in-out;
             color: rgba(138, 0, 0, 0.815);
         }
 

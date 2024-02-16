@@ -2,7 +2,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 15px 35px;
-    background-color: black;
+    background-color: $dark-blue;
     color: #ffff;
 
     @media screen and (max-width: 1024px) {

@@ -24,6 +24,9 @@ Route::prefix('/login')->middleware('guest')->group(function(){
 
 Route::middleware('auth')->group(function(){
     Route::view('admin', 'admin.index')->name('homeAdmin');
+    Route::view('annonce_admin', 'admin.annonce')->name('annonceAdmin');
+    Route::view('admin_message', 'admin.message')->name('messageAdmin');
+    Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
 
 Route::view('contact', 'client.contact')->name('contact');

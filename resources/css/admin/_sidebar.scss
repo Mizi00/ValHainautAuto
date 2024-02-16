@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 225px;
+    width: $sidebar-width;
     height: 100%;
     padding: 20px 0;
     transition: all 0.5s ease;
@@ -50,7 +50,7 @@
             font-size: 14px;
         }
     }
-
+    
     a {
         display: flex;
         gap: 10px;
@@ -69,11 +69,15 @@
         &.active {
             color: $black-color ;
             background: white;
-            border-right: 2px solid rgb(5, 68, 104);
+            border-color: $black-color;
+
+            i {
+                color: $black-color;
+            }
         }
 
         &:hover i {
-            color: $black-color     ;
+            color: $black-color ;
         }
     }
 }

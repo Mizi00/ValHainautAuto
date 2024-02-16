@@ -29,4 +29,10 @@ class AuthController extends Controller
             'email' => 'Les données sont érronées.',
         ])->onlyInput('email');
     }
+
+    public function logout(){
+        auth()->logout();
+
+        return redirect(route('home'));
+    }
 }
