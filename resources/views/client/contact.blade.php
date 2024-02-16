@@ -7,10 +7,10 @@
     <h1>Contactez-Nous !</h1>
     <form action="">
         <div class="contact-np">
-            <label for="">Prénom: <input type="text" name="prenom" id="prenom"></label>
-            <label for="">Nom: <input type="text" name="nom" id="nom"></label>
+            <label for="">Prénom: <input type="text" name="prenom" id="prenom" placeholder="Ex: John"></label>
+            <label for="">Nom: <input type="text" name="nom" id="nom" placeholder="Ex: Doe"></label>
         </div>
-        <label for="">Adresse Mail: <input type="text" name="email" id="email"></label>
+        <label for="">Adresse Mail: <input type="text" name="email" id="email" placeholder="Ex: john@doe.fr"></label>
         <label for="">Votre Message :
             <textarea name="msg" id="msg" placeholder="Ecrire ici ..." style="height:200px"></textarea>
         </label>

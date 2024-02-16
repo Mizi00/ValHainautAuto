@@ -22,5 +22,9 @@ Route::prefix('/login')->middleware('guest')->group(function(){
     Route::post('/', [AuthController::class, 'authenticate']);
 });
 
+Route::middleware('auth')->group(function(){
+    Route::view('admin', 'admin.index')->name('homeAdmin');
+});
+
 Route::view('contact', 'client.contact')->name('contact');
 Route::get('voiture', [VoitureController::class, 'index'])->name('voiture');

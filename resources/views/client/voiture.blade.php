@@ -14,7 +14,7 @@
         @foreach($annonces as $annonce)
         <li class="cards-item">
             <div class="card">
-                <div class="card-image"><img src="https://s.tmimgcdn.com/scr/1200x750/348500/modele-de-conception-de-logo-de-voiture-unique-attrayant-et-accrocheur_348510-original.jpg" alt=""></div>
+                <div class="card-image"><img src="logo-val.png" alt=""></div>
                 <div class="card-content">
                     <div>
                         <h2 class="card-title">{{ $annonce->titre }}</h2>
