@@ -2,7 +2,7 @@
         <!--Top menu -->
         <div class="sidebar">
            <div class="profile">
-            <img src="logo-val-blanc.jpeg" alt="">
+            <img src="logo-val.png" alt="">
                 <h1>Admin</h1>
                 <p>Val Hainaut Auto</p>
            </div>

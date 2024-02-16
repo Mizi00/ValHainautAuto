@@ -4,9 +4,9 @@
     </div>  
     
     <ul class="main-nav">
-        @if(auth()->check())
+        @auth
             <li><a href="{{ route('homeAdmin') }}">Tableau de Bord</a></li>
-        @endif
+        @endauth
         <li><a href="{{ route('home') }}#propos-id">Qui sommes-nous</a></li>
         <li><a href="{{ route('home') }}#service-id">Nos services</a></li>
         <li><a href="{{ route('voiture') }}">Véhicules</a></li>

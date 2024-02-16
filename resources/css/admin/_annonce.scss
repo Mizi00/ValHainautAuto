@@ -100,5 +100,21 @@
                 }
             }
         }
+
+        .div-search{
+            display: flex;
+            justify-content: end;
+            margin-bottom: 20px;
+
+            .search-annonce {
+                padding: 10px;
+                border: 2px solid black;
+                border-radius: 7px;
+
+                &:focus{
+                    background-color: $grey;
+                }
+            }
+        }
     }
 }

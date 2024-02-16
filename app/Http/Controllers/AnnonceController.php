@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 
 class AnnonceController extends Controller
 {
-    public function index(){
-        $annonces = Annonce::all();
-        return view('admin.annonce', compact('annonces'));
+    public function index(){ 
+        return view('admin.annonce');
     }
 }
