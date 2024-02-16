@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AnnonceController;
 use App\Http\Controllers\VoitureController;
 
 /*
@@ -24,7 +25,7 @@ Route::prefix('/login')->middleware('guest')->group(function(){
 
 Route::middleware('auth')->group(function(){
     Route::view('admin', 'admin.index')->name('homeAdmin');
-    Route::view('annonce_admin', 'admin.annonce')->name('annonceAdmin');
+    Route::get('annonce_admin', [AnnonceController::class, 'index'])->name('annonceAdmin');
     Route::view('admin_message', 'admin.message')->name('messageAdmin');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });

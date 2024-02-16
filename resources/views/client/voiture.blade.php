@@ -13,7 +13,7 @@
     <ul class="cards">
         @foreach($annonces as $annonce)
         <li class="cards-item">
-            <div class="card">
+            <div class="card">  
                 <div class="card-image"><img src="logo-val.png" alt=""></div>
                 <div class="card-content">
                     <div>
