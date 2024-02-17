@@ -11,9 +11,9 @@
     </div>
 
     <ul class="cards">
-        @foreach($annonces as $annonce)
+        @forelse($annonces as $annonce)
         <li class="cards-item">
-            <div class="card">  
+            <div class="card">
                 <div class="card-image"><img src="logo-val.png" alt=""></div>
                 <div class="card-content">
                     <div>
@@ -32,10 +32,15 @@
                 </div>
             </div>
         </li>
-        @endforeach
+        @empty
+        <div class="empty-card">
+                 <div><i class="fa-solid fa-question"></i></div>
+            <p>Pas de véhicule pour l'instant ...</p>
+        </div>
+
+        @endforelse
     </ul>
 
 </div>
-
-
-<x-footer />
+<x-scrollup />
+<x-footer fixed="{{ $annonces->isEmpty() ? 'true' : 'false' }}" />

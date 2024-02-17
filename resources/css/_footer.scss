@@ -5,6 +5,13 @@ footer {
     background-color: $dark-blue;
     color: #ffff;
 
+    &.footer-fixed {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+
     @media screen and (max-width: 1024px) {
         flex-direction: column;
 
@@ -20,6 +27,11 @@ footer {
             flex-direction: column;
             text-align: center;
 
+            .contact-icon{
+                margin-top: 10px;
+                align-items: center;
+            }
+
             h2::after {
                 width: 100px !important;
                 margin: 10px auto !important;
@@ -28,6 +40,7 @@ footer {
 
         .footer-inner-right {
             align-items: center !important;
+
             h2::after {
                 width: 150px !important;
                 margin: 10px auto !important;
@@ -84,6 +97,7 @@ footer {
                 cursor: pointer;
                 margin-bottom: 2px;
                 margin-left: -5px;
+
                 &:hover {
                     transition: all 0.355s ease-in-out;
                     fill: #f46c24;
@@ -124,23 +138,43 @@ footer {
         display: flex;
         flex-direction: column;
 
-        span {
-            font-size: 15px;
-        }
+        .contact-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
 
-        h2 {
-            //margin: 25  px 0;
-            color: #ffff;
-            font-size: 30px;
+            #pointer_map {
+                margin-left: 4px;
+            }
+            i {
+                font-size: 25px;
+                //margin-right: 5px;
+            }
+                span {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                }
 
-            &::after {
-                content: "";
-                height: 1px;
-                width: 20%;
-                margin: 10px 0;
-                display: block;
-                background-color: #ffff;
+                p {
+                    font-size: 15px;
+                }
+            }
+
+            h2 {
+                //margin: 25  px 0;
+                color: #ffff;
+                font-size: 30px;
+
+                &::after {
+                    content: "";
+                    height: 1px;
+                    width: 80px;
+                    margin: 10px 0;
+                    display: block;
+                    background-color: #ffff;
+                }
             }
         }
     }
-}

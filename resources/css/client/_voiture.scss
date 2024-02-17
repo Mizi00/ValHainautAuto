@@ -27,6 +27,32 @@
     margin: 0;
     padding: 0;
 
+    .empty-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        height: 50vh;
+        padding: 25px;
+        background-color: $grey;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            color: rgba(128, 128, 128, 0.774);
+        }
+
+        i{
+            font-size: 150px;
+            color: $black-color;
+        }
+    }
+    
+
     .cards-item {
         display: flex;
         padding: 1rem;

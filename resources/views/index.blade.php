@@ -2,11 +2,12 @@
 
 @section('body')
 <x-navbar />
+
 <!--SECTION HERO-->
 <section class="hero">
     <div class="hero-inner">
         <h1>VAL HAINAUT AUTO</h1>
-        <h4>Concessionnaire. Mécanique automobile. Service carte grise. Depuis 2015</h4>
+        <h4>Où chaque véhicule d'occasion raconte une histoire de qualité et de fiabilité. Découvrez la route vers votre prochaine aventure automobile avec nous ...</h4>
         <a class="button-hero" href="#propos-id">COMMENCER</a>
     </div>
 </section>
@@ -25,7 +26,7 @@
 
 <!--SECTION SERVICES-->
 <section class="service" id="service-id">
-    <div class="service-bk" >
+    <div class="service-bk">
         <div class="service-inner">
             <i class="fa-solid fa-handshake-simple" id="icon_handshake"></i>
             <h1>Service n°1</h1>
@@ -34,7 +35,7 @@
             </div>
         </div>
         <div class="service-inner">
-            <i class="fa-solid fa-headset" id="icon_earphone"></i>
+            <i class="fa-solid fa-screwdriver-wrench"></i>
             <h1>Service n°2</h1>
             <div class="service-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aspernatur sapiente officia debitis dolores vitae, perspiciatis atque at, in, quos iure corrupti quisquam aperiam fugiat cum quae iusto quasi omnis.
@@ -59,6 +60,7 @@
     </div>
 </section>
 
+<x-scrollup/>
 <x-footer />
 
 @endsection
