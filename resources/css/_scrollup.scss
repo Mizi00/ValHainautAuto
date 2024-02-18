@@ -1,32 +1,27 @@
-.div-scroll{
-    $offset: 50px; 
-    
-    display: flex;
-    flex-direction: row-reverse;
+.scroll-top {
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
 
-    position: sticky;
-    bottom: 20px;      
-    margin-right: 20px;
-    margin-left: 20px; 
-    place-self: end;
-    margin-top: calc(100vh + $offset);
-    z-index: 1;
+  color: rgba(0,0,0,0.7);
+  padding: 20px;
+  font-size: 2em;
+  
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+  }
+
+  &.activate {
+    opacity: 1;
+    visibility: visible;
+  }
 }
-
-.top {
-  
-    /* visual styling */
-    text-decoration: none;
-    padding: 15px;
-    color: $greyText;
-    background: $dark-blue;
-    border-radius: 100px;
-    white-space: nowrap;
-    font-size: 25px;
-  }
-  
-
-  html, body{
-    scroll-behavior: smooth;
-  }
-  
+html, body {
+  scroll-behavior: smooth;
+}
