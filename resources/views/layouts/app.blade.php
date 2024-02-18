@@ -8,7 +8,7 @@
     <title>ValHainaut Auto</title>
     @vite(['resources/js/app.js'])
 </head>
-<body class="Route::is('login') ? 'body-white' :''">
+<body>
     @yield('body')
       
 </body>

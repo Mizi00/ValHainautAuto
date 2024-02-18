@@ -37,12 +37,12 @@ a {
             display: flex;
             flex-direction: row;
             font-family: "Birds of Paradise";
-            
-            .span-h1-bar::after{
+
+            .span-h1-bar::after {
                 content: "";
                 height: 3px;
                 width: 150px;
-                margin:  auto;
+                margin: auto;
                 margin-left: 5px;
                 margin-top: 18px;
                 display: block;
@@ -56,6 +56,7 @@ a {
     margin-top: 5px;
     margin-right: 50px;
     font-weight: 500;
+    gap: 20px;
 }
 
 .button-sidebar {
@@ -70,7 +71,7 @@ a {
 
 .logo a,
 .main-nav a {
-    padding: 10px 15px;
+    padding: 10px 0;
     text-transform: uppercase;
     letter-spacing: 1px;
     //text-align: center;
@@ -80,10 +81,29 @@ a {
 .main-nav a {
     color: #ffff;
     font-size: .99em;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -3.5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: width 0.4s ease;
+    }
+
+    &:hover{
+        &::before {
+            width: 100%;
+        }
+    }
+    
 }
 
 .main-nav a:hover {
-    color: black;
+    color: rgb(167, 165, 165);
 }
 
 $header-height: 75px;
