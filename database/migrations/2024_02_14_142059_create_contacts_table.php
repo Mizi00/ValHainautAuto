@@ -17,11 +17,8 @@ return new class extends Migration
             $table->string('nom', 50);
             $table->string('prenom', 50);
             $table->string('mail', 255);
+            $table->string('numero', 10);
             $table->string('message', 1000);
-
-            //clé étrangère
-            $table->unsignedBigInteger('idUser');
-            $table->foreign('idUser')->references('id')->on('users');
         });
     }
 

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AnnonceController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VoitureController;
 
 /*
@@ -29,6 +30,6 @@ Route::middleware('auth')->group(function(){
     Route::view('admin_message', 'admin.message')->name('messageAdmin');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
-
-Route::view('contact', 'client.contact')->name('contact');
-Route::get('voiture', [VoitureController::class, 'index'])->name('voiture');
+Route::get('contact', [ContactController::class, 'index'])->name('contact');
+Route::post('contact', [ContactController::class, 'validateContact']);
+Route::get('voiture', [VoitureController::class, 'index'])->name('voiture'); 

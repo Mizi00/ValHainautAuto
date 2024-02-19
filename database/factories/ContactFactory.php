@@ -21,7 +21,7 @@ class ContactFactory extends Factory
             'prenom' => fake()->firstName(),
             'mail' => fake()->email(),
             'message' => fake()->text(150),
-            'idUser' => 1
+            'numero' => '0303030303'
         ];
     }
 }
