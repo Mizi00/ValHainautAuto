@@ -26,7 +26,12 @@ Route::prefix('/login')->middleware('guest')->group(function(){
 
 Route::middleware('auth')->group(function(){
     Route::view('admin', 'admin.index')->name('homeAdmin');
-    Route::get('annonce_admin', [AnnonceController::class, 'index'])->name('annonceAdmin');
+
+    Route::prefix('annonce')->name('annonce.')->controller(AnnonceController::class)->group(function() {
+        Route::get('/admin', 'index')->name('index');
+        Route::get('/show/{annonce}', 'show' )->name('show');
+    });     
+    
     Route::view('admin_message', 'admin.message')->name('messageAdmin');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });

@@ -88,15 +88,13 @@
             justify-content: space-between;
             margin-top: 20px;
             a {
-                border: 2px solid $black-color;
-                padding: 8px;
-                border-radius: 10px;
-                background-color: $black-color;
+                //border: 2px solid $black-color;
+                padding: 10px;
+                border-radius: 3px;
+                background-color: rgba(246, 52, 52, 0.881);
 
                 &:hover {
-                    background-color: $background-color-tr;
-                    transition: all 0.5s ease-in-out;
-                    color: black;
+                    text-decoration: underline;
                 }
             }
         }
@@ -108,13 +106,13 @@
 
             .search-annonce {
                 padding: 10px;
-                border: 2px solid black;
-                border-radius: 7px;
-
-                &:focus{
-                    background-color: $grey;
-                }
+                border: 2px solid grey;
+                border-radius: 3px;
             }
+        }
+
+        .pagination-container {
+            margin-bottom: 50px;
         }
     }
 }

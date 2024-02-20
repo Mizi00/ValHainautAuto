@@ -16,11 +16,13 @@ class AnnonceFactory extends Factory
      */
     public function definition(): array
     {
+        $automobiles = ["Toyota", "Honda", "Ford", "Chevrolet", "Volkswagen", "Nissan", "BMW", "Mercedes-Benz", "Audi", "Hyundai", "Kia",
+            "Mazda", "Subaru", "Tesla", "Fiat"];
         $marquesVoitures = ['Toyota', 'Honda', 'Ford', 'Chevrolet', 'BMW', 'Mercedes-Benz', 'Audi', 'Volkswagen', 'Tesla', 'Nissan'];
         $typesCarburant = ['Essence', 'Diesel', 'GPL (Gaz de Pétrole Liquéfié)', 'GNV (Gaz Naturel Véhicule)', 'Éléctrique'];
 
         return [
-            'titre' => fake()->sentence(),
+            'titre' => fake()->randomElement($automobiles),
             'prix' => fake()->randomFloat(2, 1, 10000),
             'description' => fake()->text(50),
             'idUser' => 1,

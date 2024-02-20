@@ -14,7 +14,7 @@
             <th>URL</th>
             <th>Description</th>
             <th>Date</th>
-            <th>Voir</th>
+            <th></th>
         </thead>
         <tbody class="table-body">
             @forelse($annonces as $annonce)
@@ -29,7 +29,7 @@
                 <td><a href="{{ $annonce->url }}" target="_blank">{{ $annonce->url }}</a></td>
                 <td>{{ $annonce->description }}</td>
                 <td>{{ $annonce->created_at }}</td>
-                <td><a href="">Voir</a></td>
+                <td><a href="{{ route('annonce.show', $annonce->id) }}">Voir</a></td>
             </tr>
             @empty
             <tr>
