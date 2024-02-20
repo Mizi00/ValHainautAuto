@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -20,7 +21,9 @@ class ContactController extends Controller
             'message' => 'required|min:5|max:1000'
         ]);
 
-        $contact->insert($credentials);
+        $credentials['created_at'] = Carbon::now();
+        $contact->insert($credentials); 
+        
 
         return redirect()->route('contact')->with('success', 'Formulaire envoyer !');
 

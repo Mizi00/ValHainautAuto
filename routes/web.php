@@ -30,6 +30,7 @@ Route::middleware('auth')->group(function(){
     Route::prefix('annonce')->name('annonce.')->controller(AnnonceController::class)->group(function() {
         Route::get('/admin', 'index')->name('index');
         Route::get('/show/{annonce}', 'show' )->name('show');
+        Route::get('/edit/{annonce}', 'edit')->name('edit');    
     });     
     
     Route::view('admin_message', 'admin.message')->name('messageAdmin');

@@ -16,4 +16,10 @@ class AnnonceController extends Controller
     {
         return view('admin.showannonce', compact('annonce'));
     }
+
+    public function edit(Annonce $annonce)
+    {
+            return view('admin.edit', compact('annonce'
+        ));
+    }
 }

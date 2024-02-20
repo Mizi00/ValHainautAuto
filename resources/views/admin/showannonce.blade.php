@@ -15,7 +15,7 @@
             <p><strong>Type Carburant Véhicule:</strong> {{ $annonce->typeFuel }}</p>
             <p><strong>URL Véhicule:</strong> <a href="{{ $annonce->url  }}">{{ $annonce->url }}</a> </p>
             <div class="div-button-show-annonce">
-                <a class="button-show-annonce" href="">Éditer le véhicule</a>
+                <a class="button-show-annonce" href="{{ route('annonce.edit', $annonce->id) }}">Éditer le véhicule</a>
             </div>
 
         </div>

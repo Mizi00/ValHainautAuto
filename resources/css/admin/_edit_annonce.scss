@@ -1,0 +1,65 @@
+.main-edit-annonce {
+    margin-left: $sidebar-width;
+
+    .inner-edit-annonce {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 70px;
+
+        .inner-edit-annonce-title {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            h1{
+                font-size: 55px;
+            }
+
+            p{
+                font-size: 25px;
+            }
+
+            &::after{
+                content: "";
+                height: 1.5px;
+                width: 100px;
+                margin:  2rem auto;
+                display: block;
+                background-color: black;
+            }
+        }
+        .inner-edit-annonce-text {
+            width: 100%;
+            form {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+                
+
+                label{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    font-size: 22px;
+                    font-weight: bold;
+                    width: 100%;
+                    max-width: 700px;
+                    
+                    input {
+                        //margin-left: 10px;
+                        padding: 8px 10px;
+                        border: 2px solid black;
+                        border-radius: 4px;
+                        width: 60%;
+                    }
+                }
+            }
+
+        }
+    }
+}
