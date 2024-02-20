@@ -9,6 +9,7 @@
             <th>Prix</th>
             <th>Modèle</th>
             <th>Année</th>
+            <th>Kilométrage</th>
             <th>CV</th>
             <th>Carburant</th>
             <th>URL</th>
@@ -24,6 +25,7 @@
                 <td>{{ $annonce->prix }}€</td>
                 <td>{{ $annonce->modele }}</td>
                 <td>{{ $annonce->annee }}</td>
+                <td>{{ $annonce->kilometrage }} Km</td>
                 <td>{{ $annonce->chevaux }} C.V</td>
                 <td>{{ $annonce->typeFuel }}</td>
                 <td><a href="{{ $annonce->url }}" target="_blank">{{ $annonce->url }}</a></td>

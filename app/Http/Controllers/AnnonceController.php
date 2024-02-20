@@ -19,7 +19,27 @@ class AnnonceController extends Controller
 
     public function edit(Annonce $annonce)
     {
-            return view('admin.edit', compact('annonce'
+        return view('admin.edit', compact(
+            'annonce'
         ));
+    }
+
+    public function update(Annonce $annonce, Request $request)
+    {
+        $credentials =  $request->validate([
+            'titre' => 'required',
+            'prix' => 'required',
+            'modele' => 'required',
+            'annee' => 'required',
+            'kilometrage' => 'required',
+            'chevaux' => 'required',
+            'typeFuel' => 'required',   
+            'url' => 'required',
+            'description' => 'required' 
+        ]);
+
+        $annonce->update($credentials);
+
+        return redirect()->route('annonce.index')->with('success', 'Annonce modifié avec succées');
     }
 }

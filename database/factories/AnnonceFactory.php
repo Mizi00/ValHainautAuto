@@ -30,7 +30,8 @@ class AnnonceFactory extends Factory
             'annee' => fake()->numberBetween(1990, 2024),
             'chevaux' => fake()->randomNumber(1, 500),
             'typeFuel' => fake()->randomElement($typesCarburant),
-            'url' => fake()->imageUrl()
+            'url' => fake()->imageUrl(),
+            'kilometrage' => fake()->randomNumber(1, 1000000)
         ];
     }
 }

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->double('prix', 6, 2);
             $table->string('modele', 50);
             $table->string('annee', 20);
+            $table->string('kilometrage', 20);
             $table->string('chevaux', 20);
             $table->string('typeFuel', 50);
             $table->string('url', 100);

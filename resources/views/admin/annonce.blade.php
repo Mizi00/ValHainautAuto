@@ -17,9 +17,22 @@
         </div>
 
         <div class="table-div">
-            @livewire('annonce') 
+            @livewire('annonce')
         </div>
     </div>
 </div>
+
+@section('js')
+<script>
+    butterup.toast({
+        title: '🎉 Hooray!',
+        message: 'Your payment was successful.',
+        location: 'top-right',
+        icon: false,
+        dismissable: false,
+        type: 'success',
+    });
+</script>
+@endsection
 
 @endsection
