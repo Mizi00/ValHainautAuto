@@ -29,11 +29,16 @@ Route::middleware('auth')->group(function(){
 
     Route::prefix('annonce')->name('annonce.')->controller(AnnonceController::class)->group(function() {
         Route::get('/admin', 'index')->name('index');
+
         Route::get('/show/{annonce}', 'show' )->name('show');
+
         Route::get('/edit/{annonce}', 'edit')->name('edit');
         Route::patch('/update/{annonce}', 'update')->name('update');
+
         Route::get('/add', 'add')->name('add');
         Route::patch('/validate_add', 'validateAdd')->name('validateAdd');
+
+        Route::get('delete/{annonce}', 'delete')->name('delete');
     });     
     
     Route::view('admin_message', 'admin.message')->name('messageAdmin');

@@ -54,7 +54,13 @@
                 padding: 0 15px 5px;
                 text-align: left;
             }
-        
+            
+            .tb-td-link{
+                a {
+                    margin-left: 5px;
+                    font-size: 20px;
+                }
+            }
             th, td {
                 padding: 12px 15px;
                 line-height: 1.462;
@@ -62,6 +68,7 @@
                 border-top: 1px solid #cdd4e0 ;
                 text-align: left;
             }
+
         
             .table-body {
                 a {

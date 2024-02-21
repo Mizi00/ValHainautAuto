@@ -19,7 +19,7 @@
         </thead>
         <tbody class="table-body">
             @forelse($annonces as $annonce)
-            <tr>
+            <tr>        
                 <td>{{ $annonce->id }}</td>
                 <td>{{ $annonce->titre }}</td>
                 <td>{{ $annonce->prix }}€</td>
@@ -31,9 +31,9 @@
                 <td><a href="{{ $annonce->url }}" target="_blank">{{ $annonce->url }}</a></td>
                 <td>{{ $annonce->description }}</td>
                 <td>{{ $annonce->created_at }}</td>
-                <td><a href="{{ route('annonce.show', $annonce->id) }}">Voir</a></td>
+                <td class="tb-td-link"><a href="{{ route('annonce.show', $annonce->id) }}"><i class="fa-regular fa-eye"></i></a> <a href="{{ route('annonce.delete', $annonce->id) }}"><i class="fa-regular fa-trash-can"></i></a></td>
             </tr>
-            @empty
+            @empty  
             <tr>
                 <td colspan="11">Aucune annonce ...</td>
             </tr>

@@ -68,4 +68,10 @@ class AnnonceController extends Controller
 
         return redirect()->route('annonce.index')->with('success', 'Annonce ajouter avec succées');
     }
+
+    public function delete(Annonce $annonce)
+    {
+        $annonce->delete();
+        return redirect()->route('annonce.index')->with('delete', 'Annonce supprimé !');
+    }
 }

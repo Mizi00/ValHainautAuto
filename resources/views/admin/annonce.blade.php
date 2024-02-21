@@ -21,18 +21,19 @@
         </div>
     </div>
 </div>
-
+@if(session('success') || session('delete'))
 @section('js')
 <script>
     butterup.toast({
-        title: '🎉 Hooray!',
-        message: 'Your payment was successful.',
+        title: ' {{ session('success') ? '✅ Val Hainaut Auto ✅ ' : '🚨 Val Hainaut Auto 🚨' }}',
+        message: '{{ session('success') ? session('success') : session('delete') }}',
         location: 'top-right',
         icon: false,
         dismissable: false,
-        type: 'success',
+        type: '{{ session('success') ? 'success' : 'error' }}'
     });
 </script>
 @endsection
+@endif
 
 @endsection
