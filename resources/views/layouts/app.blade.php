@@ -11,7 +11,7 @@
     @vite(['resources/js/app.js'])
 </head>
 
-<body class="{{ Route::is('annonce.edit') ? 'bk-grey' : '' }}">
+<body class="{{ Route::is('annonce.edit') || Route::is('annonce.show') ? 'bk-grey' : '' }}">
     @yield('body')
     <script src="{{ asset('asset/butterup.min.js') }}"></script>
     @yield('js')

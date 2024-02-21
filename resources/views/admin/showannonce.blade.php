@@ -4,7 +4,9 @@
 <x-admin.sidebar />
 <div class="main-show-annonce">
     <div class="inner-show-annonce">
-        <h1>Annonce n° {{ $annonce->id }} ➜ {{ $annonce->titre }}</h1>
+        <div class="inner-title">
+            <h1>Annonce n° {{ $annonce->id }} ➜ {{ $annonce->titre }}</h1>
+        </div>
         <div class="inner-show-annonce-text">
             <p><strong>Id Annonce:</strong> {{ $annonce->id }}</p>
             <p><strong>Nom Véhicule:</strong> {{ $annonce->titre }}</p>
