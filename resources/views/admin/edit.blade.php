@@ -66,7 +66,7 @@
                     </div>
                     <div class="div-form">
                         <label for="">URL annonce:</label>
-                        <input type="text" name="url" value="{{ $annonce->url }}">
+                        <input type="url" name="url" value="{{ $annonce->url }}">
                     </div>
                 </div>
 

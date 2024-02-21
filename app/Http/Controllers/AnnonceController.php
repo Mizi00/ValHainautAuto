@@ -33,13 +33,39 @@ class AnnonceController extends Controller
             'annee' => 'required',
             'kilometrage' => 'required',
             'chevaux' => 'required',
-            'typeFuel' => 'required',   
+            'typeFuel' => 'required',
             'url' => 'required',
-            'description' => 'required' 
+            'description' => 'required'
         ]);
 
         $annonce->update($credentials);
 
         return redirect()->route('annonce.index')->with('success', 'Annonce modifié avec succées');
+    }
+
+    public function add(Annonce $annonce)
+    {
+        return view('admin.add', compact('annonce'));
+    }
+
+    public function validateAdd(Annonce $annonce, Request $request)
+    {
+        
+        $credentials = $request->validate([
+            'titre' => 'required',
+            'prix' => 'required',
+            'modele' => 'required',
+            'annee' => 'required',
+            'kilometrage' => 'required',
+            'chevaux' => 'required',
+            'typeFuel' => 'required',
+            'url' => 'required',
+            'description' => 'required'
+        ]);
+        $credentials['idUser'] = auth()->user()->id;
+
+        $annonce->insert($credentials);
+
+        return redirect()->route('annonce.index')->with('success', 'Annonce ajouter avec succées');
     }
 }

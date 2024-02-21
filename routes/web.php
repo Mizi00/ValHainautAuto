@@ -31,7 +31,9 @@ Route::middleware('auth')->group(function(){
         Route::get('/admin', 'index')->name('index');
         Route::get('/show/{annonce}', 'show' )->name('show');
         Route::get('/edit/{annonce}', 'edit')->name('edit');
-        Route::patch('/update/{annonce}', 'update')->name('update');    
+        Route::patch('/update/{annonce}', 'update')->name('update');
+        Route::get('/add', 'add')->name('add');
+        Route::patch('/validate_add', 'validateAdd')->name('validateAdd');
     });     
     
     Route::view('admin_message', 'admin.message')->name('messageAdmin');

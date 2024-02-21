@@ -13,7 +13,7 @@
     <div class="body-annonce">
         <div class="head-body-annonce">
             <h1>Liste des annonces</h1>
-            <a href="">Ajouter une annonce</a>
+            <a href="{{ route('annonce.add') }}">Ajouter une annonce</a>
         </div>
 
         <div class="table-div">
