@@ -17,7 +17,7 @@
                 </div>
                 <div class="div-form">
                     <label for="">Prix:</label>
-                    <input type="number" name="prix">
+                    <input type="number" step="0.01" name="prix">
                 </div>
             </div>
 
@@ -38,8 +38,8 @@
                     <input type="text" name="annee">
                 </div>
                 <div class="div-form">
-                    <label for="">C.V:</label>
-                    <input type="number" name="chevaux" min="0">
+                    <label for="">Cv:</label>
+                    <input type="number" name="cv" min="0">
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
                 <div class="div-form">
                     <label for="">Type carburant:</label>
                     <select name="typeFuel" id="">
-                        <option value="">--Sectionnez--</option>
+                        <option value="">---Sectionner---</option>
                         <option value="Essence">Essence</option>
                         <option value="Diesel">Diesel</option>
                         <option value="Éléctrique">Éléctrique</option>
@@ -55,12 +55,19 @@
                     </select>
                 </div>
                 <div class="div-form">
+                    <label for="">Ch</label>
+                    <input type="number" name="ch" min="0">
+                </div>
+                
+            </div>
+            <div class="div-form-container">
+                <div class="div-form">
                     <label for="">URL annonce:</label>
                     <input type="url" name="url" value="" placeholder="Ex: https://johndoe.exemple">
                 </div>
             </div>
 
-            <div class="div-form">
+            <div class="txtarea">
                 <label for="">Description:</label>
                 <textarea name="description" id="" cols="60" rows="10" placeholder="Écrire la description du véhicule ..."></textarea>
             </div>

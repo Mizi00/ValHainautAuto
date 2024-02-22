@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Annonce;
 use Illuminate\Http\Request;
 
@@ -63,7 +64,7 @@ class AnnonceController extends Controller
             'description' => 'required'
         ]);
         $credentials['idUser'] = auth()->user()->id;
-
+        $credentials['created_at'] = Carbon::now();
         $annonce->insert($credentials);
 
         return redirect()->route('annonce.index')->with('success', 'Annonce ajouter avec succées');

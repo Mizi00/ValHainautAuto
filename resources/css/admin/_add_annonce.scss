@@ -1,4 +1,26 @@
-.inner-text-annonce-text{
+.inner-title-edit-annonce {
+    background-color: $black-color;
+    padding: 75px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h1{
+        font-size: 45px;
+        color: #fff;
+
+        &::after{
+            content: "";
+            height: 1.5px;
+            width: 150px;
+            margin:  15px auto;
+            display: block;
+            background-color: #fff;
+        }
+    }
+}
+
+.inner-text-edit-annonce{
     width: 100%;
     padding: 15px 0;
     form {
@@ -6,7 +28,8 @@
         flex-direction: column;
         align-items: center;
         //margin-left: 300px;
-        margin: 0 300px;
+        margin: 0 auto;
+        max-width: 900px;
         padding: 35px 0;
         gap: 15px;
         background-color: #fff;
@@ -18,36 +41,78 @@
             flex-direction: row;
             gap: 80px;
             align-items: center;
+            max-width: 550px;
+            width: 100%;
+            justify-content: center;
+
+            @media screen and (max-width:500px) {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                &::after{
+                    content: "";
+                    height: 2px;
+                    width: 100px;
+                    margin:  15px auto;
+                    display: block;
+                    background-color: black;
+                }
+            }
+        }
+
+        .txtarea {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            max-width: 450px;
+            width: 100%;
+
+            label {
+                font-size: 20px;
+                text-decoration: underline;
+            }
+
+            textarea {
+                width: 100%;
+                max-width: 450px;
+                border: 2px solid grey;
+                border-radius: 3px;
+
+                &:focus {
+                    border: 2px solid black;
+                    outline: none;
+                }
+            }
+
         }
         .div-form{
             display: flex;
             flex-direction: column;
             gap: 5px;
+            max-width: 340px;
+            width: 100%;
             
             label {
-                font-size: px;
                 text-decoration: underline;
             }
 
             input {
                 padding: 0 5px;
                 width: 100%;
-                max-width: 210px;
+                //max-width: 210px;
                 height: 35px;
                 border: 2px solid gray;
                 border-radius: 3px;
-                //border: 2px solid transparent;
                 
                 &:focus {
                     border: 2px solid black;
-                    outline: none;
-                    
+                    outline: none;      
                 }
             }
 
             select {
                 padding: 0 5px;
-                width: 210px;
                 height: 35px;
                 border: 2px solid gray;
                 border-radius: 3px;
@@ -59,6 +124,8 @@
             }
 
             textarea{
+                width: 100%;
+                max-width: 450px;
                 border: 2px solid grey;
                 border-radius: 3px;
 

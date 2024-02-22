@@ -19,7 +19,7 @@
                     </div>
                     <div class="div-form">
                         <label for="">Prix:</label>
-                        <input type="number" name="prix" value="{{ $annonce->prix }}">
+                        <input type="number" step="0.01" name="prix" value="{{ $annonce->prix }}">
                     </div>
                 </div>
 
@@ -41,7 +41,7 @@
                     </div>
                     <div class="div-form">
                         <label for="">C.V:</label>
-                        <input type="number" name="chevaux" min="0" value="{{ $annonce->chevaux }}">
+                        <input type="number" name="cv" min="0" value="{{ $annonce->chevaux }}">
                     </div>
                 </div>
 
@@ -65,12 +65,19 @@
                         </select>
                     </div>
                     <div class="div-form">
+                        <label for="">Ch</label>
+                        <input type="number" min="0" name="ch">
+                    </div>
+                </div>
+
+                <div class="div-form-container">
+                    <div class="div-form">
                         <label for="">URL annonce:</label>
                         <input type="url" name="url" value="{{ $annonce->url }}">
                     </div>
                 </div>
 
-                <div class="div-form">
+                <div class="txtarea">
                     <label for="">Description:</label>
                     <textarea name="description" id="" cols="60" rows="10">{{ $annonce->description }}</textarea>
                 </div>
