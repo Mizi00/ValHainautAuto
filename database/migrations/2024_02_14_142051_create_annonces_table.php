@@ -15,14 +15,15 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('titre', 255);
-            $table->double('prix', 6, 2);
-            $table->string('modele', 50);
+            $table->double('prix', 10, 2);
+            $table->string('modele', 255);
             $table->string('annee', 20);
             $table->string('kilometrage', 20);
-            $table->string('chevaux', 20);
+            $table->string('cv', 20);
+            $table->string('ch', 20);
             $table->string('typeFuel', 50);
-            $table->string('url', 100);
-            $table->string('description', 300);
+            $table->string('url', 500);
+            $table->string('description', 500);
 
             //clé étrangère 
             $table->unsignedBigInteger('idUser');

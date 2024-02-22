@@ -33,7 +33,8 @@ class AnnonceController extends Controller
             'modele' => 'required',
             'annee' => 'required',
             'kilometrage' => 'required',
-            'chevaux' => 'required',
+            'cv' => 'required',
+            'ch' => 'required',
             'typeFuel' => 'required',
             'url' => 'required',
             'description' => 'required'
@@ -58,7 +59,8 @@ class AnnonceController extends Controller
             'modele' => 'required',
             'annee' => 'required',
             'kilometrage' => 'required',
-            'chevaux' => 'required',
+            'cv' => 'required',
+            'ch' => 'required',
             'typeFuel' => 'required',
             'url' => 'required',
             'description' => 'required'

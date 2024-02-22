@@ -28,7 +28,8 @@ class AnnonceFactory extends Factory
             'idUser' => 1,
             'modele' => fake()->randomElement($marquesVoitures),
             'annee' => fake()->numberBetween(1990, 2024),
-            'chevaux' => fake()->randomNumber(1, 500),
+            'cv' => fake()->randomNumber(1, 500),
+            'ch'=> fake()->numberBetween(50, 1000),
             'typeFuel' => fake()->randomElement($typesCarburant),
             'url' => fake()->imageUrl(),
             'kilometrage' => fake()->randomNumber(1, 1000000)

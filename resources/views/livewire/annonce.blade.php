@@ -11,6 +11,7 @@
             <th>Année</th>
             <th>Kilométrage</th>
             <th>CV</th>
+            <th>CH</th>
             <th>Carburant</th>
             <th>URL</th>
             <th>Description</th>
@@ -26,7 +27,8 @@
                 <td>{{ $annonce->modele }}</td>
                 <td>{{ $annonce->annee }}</td>
                 <td>{{ $annonce->kilometrage }} Km</td>
-                <td>{{ $annonce->chevaux }} C.V</td>
+                <td>{{ $annonce->cv }} Cv</td>
+                <td>{{ $annonce->ch }} Ch</td>
                 <td>{{ $annonce->typeFuel }}</td>
                 <td><a href="{{ $annonce->url }}" target="_blank">{{ $annonce->url }}</a></td>
                 <td>{{ $annonce->description }}</td>
