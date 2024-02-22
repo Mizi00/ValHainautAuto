@@ -37,7 +37,15 @@
                 <div class="div-form-container">
                     <div class="div-form">
                         <label for="">Année:</label>
-                        <input type="text" name="annee" value="{{ $annonce->annee }}">
+                      <select name="annee" id="">
+                        <option value="{{ $annonce->annee }}">{{ $annonce->annee }}</option>
+                        <option value="">-----------------------</option>
+                            @for($i=1900; $i<=2200; $i++)
+                                @if($annonce->annee !=$i)
+                                <option value="{{ $i }}">{{ $i }}</option>
+                                @endif
+                            @endfor
+                        </select>
                     </div>
                     <div class="div-form">
                         <label for="">C.V:</label>
@@ -50,6 +58,7 @@
                         <label for="">Type carburant:</label>
                         <select name="typeFuel" id="">
                             <option value="{{ $annonce->typeFuel }}">{{ $annonce->typeFuel }}</option>
+                            <option value="">------------------</option>
                             @if($annonce->typeFuel !='Essence')
                             <option value="Essence">Essence</option>
                             @endif

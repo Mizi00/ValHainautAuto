@@ -54,17 +54,19 @@ class AnnonceController extends Controller
     {
         
         $credentials = $request->validate([
-            'titre' => 'required',
+            'titre' => 'required|max:100',
             'prix' => 'required',
             'modele' => 'required',
-            'annee' => 'required',
+            'annee' => 'required|max:4',
             'kilometrage' => 'required',
             'cv' => 'required',
             'ch' => 'required',
             'typeFuel' => 'required',
             'url' => 'required',
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:5000',
             'description' => 'required'
         ]);
+        $img = $request->file('img');
         $credentials['idUser'] = auth()->user()->id;
         $credentials['created_at'] = Carbon::now();
         $annonce->insert($credentials);

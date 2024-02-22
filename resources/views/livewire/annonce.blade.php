@@ -26,9 +26,9 @@
                 <td>{{ $annonce->prix }}€</td>
                 <td>{{ $annonce->modele }}</td>
                 <td>{{ $annonce->annee }}</td>
-                <td>{{ $annonce->kilometrage }} Km</td>
-                <td>{{ $annonce->cv }} Cv</td>
-                <td>{{ $annonce->ch }} Ch</td>
+                <td>{{ $annonce->kilometrage }} <strong>Km</strong></td>
+                <td>{{ $annonce->cv }} <strong>Cv</strong></td>
+                <td>{{ $annonce->ch }} <strong>Ch</strong></td>
                 <td>{{ $annonce->typeFuel }}</td>
                 <td><a href="{{ $annonce->url }}" target="_blank">{{ $annonce->url }}</a></td>
                 <td>{{ $annonce->description }}</td>

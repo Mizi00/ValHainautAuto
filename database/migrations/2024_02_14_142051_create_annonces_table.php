@@ -23,7 +23,8 @@ return new class extends Migration
             $table->string('ch', 20);
             $table->string('typeFuel', 50);
             $table->string('url', 500);
-            $table->string('description', 500);
+            $table->string('img', 255);
+            $table->string('vitesse', 50);
 
             //clé étrangère 
             $table->unsignedBigInteger('idUser');

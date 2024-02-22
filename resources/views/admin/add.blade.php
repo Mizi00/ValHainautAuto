@@ -35,11 +35,21 @@
             <div class="div-form-container">
                 <div class="div-form">
                     <label for="">Année:</label>
-                    <input type="text" name="annee" autocomplete="off">
+                    <select name="annee" id="">
+                        <option value="">---Selectionner---</option>
+                        @for($i=1900; $i<=2200; $i++)
+                            <option value="{{ $i }}">{{ $i }}</option>
+                        @endfor
+                    </select>
                 </div>
                 <div class="div-form">
                     <label for="">Cv:</label>
-                    <input type="number" name="cv" min="0" autocomplete="off">
+                    <select name="ch" id="">
+                        <option value="">---Selectionner---</option>
+                        @for($i=1; $i<=100; $i++)
+                            <option value="{{ $i }}">{{ $i }}</option>
+                        @endfor
+                    </select>
                 </div>
             </div>
 
@@ -55,7 +65,7 @@
                     </select>
                 </div>
                 <div class="div-form">
-                    <label for="">Ch</label>
+                    <label for="">Ch:</label>
                     <input type="number" name="ch" min="0" autocomplete="off">
                 </div>
                 
@@ -64,6 +74,12 @@
                 <div class="div-form">
                     <label for="">URL annonce:</label>
                     <input type="url" name="url" value="" placeholder="Ex: https://johndoe.exemple" autocomplete="off">
+                </div>
+            </div>
+            <div class="div-form-container">
+                <div class="div-form">
+                    <label for=""><i class="fa-solid fa-upload"></i> Choisir le fichier</label>
+                    <input type="file" name="img" accept="image/png, image/jpeg">
                 </div>
             </div>
 

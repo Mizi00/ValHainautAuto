@@ -1,6 +1,6 @@
 .inner-title-edit-annonce {
     background-color: $black-color;
-    padding: 75px 0;
+    padding: 25px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,6 +109,12 @@
                     border: 2px solid black;
                     outline: none;      
                 }
+            }
+
+            input[type=file] {
+                //border: none;
+                margin-top: 15px;
+                padding: 5px 15px;
             }
 
             select {

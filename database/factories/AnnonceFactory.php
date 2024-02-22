@@ -20,11 +20,12 @@ class AnnonceFactory extends Factory
             "Mazda", "Subaru", "Tesla", "Fiat"];
         $marquesVoitures = ['Toyota', 'Honda', 'Ford', 'Chevrolet', 'BMW', 'Mercedes-Benz', 'Audi', 'Volkswagen', 'Tesla', 'Nissan'];
         $typesCarburant = ['Essence', 'Diesel', 'GPL (Gaz de Pétrole Liquéfié)', 'GNV (Gaz Naturel Véhicule)', 'Éléctrique'];
+        $vitesse  = ['Automatique', 'Manuelle'];
 
         return [
             'titre' => fake()->randomElement($automobiles),
             'prix' => fake()->randomFloat(2, 1, 10000),
-            'description' => fake()->text(50),
+            'vitesse' => fake()->randomElement($vitesse),
             'idUser' => 1,
             'modele' => fake()->randomElement($marquesVoitures),
             'annee' => fake()->numberBetween(1990, 2024),
