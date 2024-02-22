@@ -23,8 +23,19 @@
         </div>
         <div class="propos-video">
             <h1>En Vidéo...</h1>
-            <iframe width="1205" height="678" src="https://www.youtube.com/embed/2bvG0jZMqdE" title="VAL HAINAUT AUTO Atelier &amp; Réparation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="1205" height="678" src="https://www.youtube.com/embed/R10Yc3DnZKw" title="Vidéo de présentation   Val Hainaut Auto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="propos-video-inner">
+                <div class="propos-video-inner-single">
+                    <iframe width="700" height="400" src="https://www.youtube.com/embed/2bvG0jZMqdE" title="VAL HAINAUT AUTO Atelier &amp; Réparation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <hr width="1" size="200" color="black" />
+                    <p>Atelier & Réparation </p>
+                </div>
+                <div class="propos-video-inner-single">
+                    <p>Notre Fonctionnement</p>
+                    <hr width="1" size="200" color="black" />
+                    <iframe width="700" height="400" src="https://www.youtube.com/embed/R10Yc3DnZKw" title="Vidéo de présentation   Val Hainaut Auto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
