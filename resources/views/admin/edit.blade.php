@@ -9,6 +9,15 @@
             <p>Annonce n°{{ $annonce->id }} ➜ {{ $annonce->titre }}</p>
         </div>
         <div class="inner-edit-annonce-text">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
             <form action="{{ route('annonce.update', $annonce->id) }}" method="post">
                 @method('patch')
                 @csrf
@@ -37,19 +46,25 @@
                 <div class="div-form-container">
                     <div class="div-form">
                         <label for="">Année:</label>
-                      <select name="annee" id="">
-                        <option value="{{ $annonce->annee }}">{{ $annonce->annee }}</option>
-                        <option value="">-----------------------</option>
-                            @for($i=1900; $i<=2200; $i++)
-                                @if($annonce->annee !=$i)
+                        <select name="annee" id="">
+                            <option value="{{ $annonce->annee }}">{{ $annonce->annee }}</option>
+                            <option value="">------</option>
+                            @for($i=1900; $i<=2200; $i++) @if($annonce->annee !=$i)
                                 <option value="{{ $i }}">{{ $i }}</option>
                                 @endif
-                            @endfor
+                                @endfor
                         </select>
                     </div>
                     <div class="div-form">
                         <label for="">C.V:</label>
-                        <input type="number" name="cv" min="0" value="{{ $annonce->chevaux }}">
+                        <select name="cv" id="">
+                            <option value="{{ $annonce->cv }}">{{ $annonce->cv }}</option>
+                            <option value="">-----</option>
+                            @for($i; $i<=100; $i++) @if($annonce->cv != $i)
+                                <option value="{{ $i }}">{{ $i }}</option>
+                                @endif
+                                @endfor
+                        </select>
                     </div>
                 </div>
 
@@ -58,7 +73,7 @@
                         <label for="">Type carburant:</label>
                         <select name="typeFuel" id="">
                             <option value="{{ $annonce->typeFuel }}">{{ $annonce->typeFuel }}</option>
-                            <option value="">------------------</option>
+                            <option value="">--------------</option>
                             @if($annonce->typeFuel !='Essence')
                             <option value="Essence">Essence</option>
                             @endif
@@ -74,8 +89,8 @@
                         </select>
                     </div>
                     <div class="div-form">
-                        <label for="">Ch</label>
-                        <input type="number" min="0" name="ch">
+                        <label for="">Ch: </label>
+                        <input type="number" min="0" name="ch" value="{{ $annonce->ch }}">
                     </div>
                 </div>
 
@@ -84,11 +99,23 @@
                         <label for="">URL annonce:</label>
                         <input type="url" name="url" value="{{ $annonce->url }}">
                     </div>
+                    <div class="div-form">
+                        <label for="">Type de boîte: </label>
+                        <select name="vitesse" id="">
+                            @if($annonce->vitesse !='Manuelle')
+                            <option value="Manuelle">Manuelle</option>
+                            @endif
+                            @if($annonce->vitesse !='Automatique')
+                            <option value="Automatique">Automatique</option>
+                            @endif
+                        </select>
+                    </div>
                 </div>
-
-                <div class="txtarea">
-                    <label for="">Description:</label>
-                    <textarea name="description" id="" cols="60" rows="10">{{ $annonce->description }}</textarea>
+                <div class="div-form-container">
+                    <div class="div-form">
+                        <label for=""><i class="fa-solid fa-upload"></i> Choisir le fichier</label>
+                        <input type="file" name="img" accept="image/png, image/jpeg">
+                    </div>
                 </div>
                 <div class="div-form-bt">
                     <input type="submit" value="Modifier">

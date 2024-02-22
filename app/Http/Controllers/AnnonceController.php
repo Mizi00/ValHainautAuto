@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\Annonce;
 use Illuminate\Http\Request;
+use Intervention\Image\Laravel\Facades\Image;
 
 class AnnonceController extends Controller
 {
@@ -36,8 +37,7 @@ class AnnonceController extends Controller
             'cv' => 'required',
             'ch' => 'required',
             'typeFuel' => 'required',
-            'url' => 'required',
-            'description' => 'required'
+            'url' => 'required'
         ]);
 
         $annonce->update($credentials);
@@ -54,21 +54,33 @@ class AnnonceController extends Controller
     {
         
         $credentials = $request->validate([
-            'titre' => 'required|max:100',
+            'titre' => 'required',
             'prix' => 'required',
             'modele' => 'required',
-            'annee' => 'required|max:4',
+            'annee' => 'required',
             'kilometrage' => 'required',
             'cv' => 'required',
             'ch' => 'required',
             'typeFuel' => 'required',
             'url' => 'required',
-            'img' => 'required|image|mimes:jpeg,png,jpg|max:5000',
-            'description' => 'required'
+            'vitesse' =>'required',
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:5000'
         ]);
+
         $img = $request->file('img');
+
+        if($request->hasFile('image')){
+            $originalImage = $request->file('image');
+
+            $fileName = md5(time() . $originalImage->getClientOriginalName());
+            Image::read($originalImage)->toWebP(85)->save("storage/uploads/{$fileName}.webp");
+
+            $imagePath = "{$fileName}.webp";
+        }
+
         $credentials['idUser'] = auth()->user()->id;
         $credentials['created_at'] = Carbon::now();
+
         $annonce->insert($credentials);
 
         return redirect()->route('annonce.index')->with('success', 'Annonce ajouter avec succées');

@@ -4,10 +4,19 @@
 <x-admin.sidebar />
 <div class="main-edit-annonce">
     <div class="inner-title-edit-annonce">
-        <h1>Ajouter une annonce</h1>        
-    </div>  
+        <h1>Ajouter une annonce</h1>
+    </div>
     <div class="inner-text-edit-annonce">
-        <form action="{{ route('annonce.validateAdd') }}" method="post">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        <form action="{{ route('annonce.validateAdd') }}" method="post" enctype="multipart/form-data">
             @method('patch')
             @csrf
             <div class="div-form-container">
@@ -37,18 +46,16 @@
                     <label for="">Année:</label>
                     <select name="annee" id="">
                         <option value="">---Selectionner---</option>
-                        @for($i=1900; $i<=2200; $i++)
-                            <option value="{{ $i }}">{{ $i }}</option>
-                        @endfor
+                        @for($i=1990; $i<=2200; $i++) <option value="{{ $i }}">{{ $i }}</option>
+                            @endfor
                     </select>
                 </div>
                 <div class="div-form">
                     <label for="">Cv:</label>
-                    <select name="ch" id="">
+                    <select name="cv" id="">
                         <option value="">---Selectionner---</option>
-                        @for($i=1; $i<=100; $i++)
-                            <option value="{{ $i }}">{{ $i }}</option>
-                        @endfor
+                        @for($i=1; $i<=100; $i++) <option value="{{ $i }}">{{ $i }}</option>
+                            @endfor
                     </select>
                 </div>
             </div>
@@ -68,12 +75,19 @@
                     <label for="">Ch:</label>
                     <input type="number" name="ch" min="0" autocomplete="off">
                 </div>
-                
+
             </div>
             <div class="div-form-container">
                 <div class="div-form">
-                    <label for="">URL annonce:</label>
+                    <label for="">URL annonce: </label>
                     <input type="url" name="url" value="" placeholder="Ex: https://johndoe.exemple" autocomplete="off">
+                </div>
+                <div class="div-form">
+                    <label for="">Type de boîte: </label>
+                    <select name="vitesse" id="">
+                        <option value="Manuelle">Manuelle</option>
+                        <option value="Automatique">Automatique</option>
+                    </select>
                 </div>
             </div>
             <div class="div-form-container">
@@ -81,12 +95,7 @@
                     <label for=""><i class="fa-solid fa-upload"></i> Choisir le fichier</label>
                     <input type="file" name="img" accept="image/png, image/jpeg">
                 </div>
-            </div>
-
-            <div class="txtarea">
-                <label for="">Description:</label>
-                <textarea name="description" id="" cols="60" rows="10" placeholder="Écrire la description du véhicule ..." autocomplete="off"></textarea>
-            </div>
+            </div>  
             <div class="div-form-bt">
                 <input type="submit" value="Ajouter">
             </div>

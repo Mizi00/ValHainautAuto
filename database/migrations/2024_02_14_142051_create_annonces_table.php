@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('ch', 20);
             $table->string('typeFuel', 50);
             $table->string('url', 500);
-            $table->string('img', 255);
+            $table->string('img', 255)->nullable();
             $table->string('vitesse', 50);
 
             //clé étrangère 

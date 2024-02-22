@@ -73,18 +73,6 @@
                 text-decoration: underline;
             }
 
-            textarea {
-                width: 100%;
-                max-width: 450px;
-                border: 2px solid grey;
-                border-radius: 3px;
-
-                &:focus {
-                    border: 2px solid black;
-                    outline: none;
-                }
-            }
-
         }
         .div-form{
             display: flex;
@@ -128,18 +116,6 @@
                     outline: none;
                 }
             }
-
-            textarea{
-                width: 100%;
-                max-width: 450px;
-                border: 2px solid grey;
-                border-radius: 3px;
-
-                &:focus{
-                    border: 2px solid black;
-                    outline: none;
-                }
-            } 
         }
         .div-form-bt {
             text-align: center;

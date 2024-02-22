@@ -9,6 +9,11 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 0.925rem;
     margin: 0;
+
+    .error {
+        color: red;
+        font-size: 13px;
+    }
     
      ul {
         list-style-type: none
