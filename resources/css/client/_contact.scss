@@ -83,10 +83,11 @@
         cursor: pointer;
         width: 100%;
         margin-bottom: 15px;
+        transition: $hoverTransition;
 
         &:hover {
             background-color: $black-color;
-            transition: $hoverTransition;
+            
         }
     }
 

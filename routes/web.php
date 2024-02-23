@@ -39,9 +39,11 @@ Route::middleware('auth')->group(function(){
         Route::patch('/validate_add', 'validateAdd')->name('validateAdd');
 
         Route::get('delete/{annonce}', 'delete')->name('delete');
+
+        
     });     
     
-    Route::view('admin_message', 'admin.message')->name('messageAdmin');
+    Route::view('admin_message', 'admin.contact')->name('messageAdmin');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
 Route::get('contact', [ContactController::class, 'index'])->name('contact');

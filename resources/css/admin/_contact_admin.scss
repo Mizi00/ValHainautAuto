@@ -1,0 +1,119 @@
+.main-contact {
+    margin-left: $sidebar-width;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0;
+        background-color: $black-color;
+        color: #fff;
+        gap: 7px;
+
+        h1 {
+            font-size: 35px;
+
+            &::after {
+                content: "";
+                height: 1.5px;
+                width: 100px;
+                margin: 10px auto;
+                display: block;
+                background-color: #fff;
+            }
+        }
+
+        p {
+            color: #ffffff9b;
+
+        }
+    }
+
+    &-body {
+        margin: 0 2rem;
+
+        .table-div {
+            display: block;
+            overflow-x: auto;
+            margin-top: 4rem;
+        }
+
+        .table-realisation {
+            margin-bottom: 0;
+            color: #3b4863;
+            width: 100%;
+            border-collapse: collapse;
+
+            thead th {
+                color: #7987a1;
+                font-weight: 700;
+                font-size: 15px;
+                letter-spacing: 2.5px;
+                text-transform: uppercase;
+                border-bottom-width: 0;
+                border-top-width: 0;
+                padding: 0 15px 5px;
+                text-align: left;
+            }
+
+            .tb-td-link {
+                a {
+                    margin-left: 5px;
+                    font-size: 20px;
+                }
+            }
+
+            th,
+            td {
+                padding: 12px 15px;
+                line-height: 1.462;
+                vertical-align: top;
+                border-top: 1px solid #cdd4e0;
+                text-align: left;
+            }
+
+
+            .table-body {
+                a {
+                    font-weight: 500;
+                    color: #606265;
+
+                    &:hover {
+                        color: #006ed4;
+                        transition: $hoverTransition;
+                        text-decoration: underline;
+                    }
+                }
+
+                tr:hover {
+                    cursor: pointer;
+                    background-color: rgba(0, 0, 0, 0.075);
+                }
+            }
+
+        }
+
+        &-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .div-search{
+            display: flex;
+            justify-content: end;
+            margin-bottom: 20px;
+
+            .search-annonce {
+                padding: 10px;
+                border: 2px solid grey;
+                border-radius: 3px;
+            }
+        }
+
+        .pagination-container {
+            margin-bottom: 50px;
+        }
+    }
+}

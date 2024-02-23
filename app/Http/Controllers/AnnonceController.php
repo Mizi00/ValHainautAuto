@@ -22,9 +22,7 @@ class AnnonceController extends Controller
 
     public function edit(Annonce $annonce)
     {
-        return view('admin.edit', compact(
-            'annonce'
-        ));
+        return view('admin.edit', compact('annonce'));
     }
 
     public function update(Annonce $annonce, Request $request)

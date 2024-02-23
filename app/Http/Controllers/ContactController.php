@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    public function index(){
-        return view('client.contact');
+    public function index(Contact $contact){
+        return view('client.contact', compact('contact'));
     }
 
     public function validateContact(Request $request, Contact $contact) {
