@@ -29,42 +29,7 @@
             color: $greyText;
         }
 
-        .propos-video {
-
-            h1::after{
-                content: "";
-                height: 2px;
-                width: 100px;
-                margin:  2rem auto;
-                display: block;
-                background-color: $red-color;
-            }
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-
-            &-inner {
-                display: flex;
-                flex-direction: column;
-                gap: 50px;
-                //border: 2px solid $default-color; // A revoir
-                //border-radius: 55px;
-                padding: 35px 85px;
-
-                &-single{
-                display: flex;
-                gap: 100px;
-                align-items: center;
-                justify-content: center;
-
-
-                p{
-                    font-size: 35px;
-                }
-            }
-            }
-            
-        }
+        
         
         h1 {
             margin: 7rem 0;
