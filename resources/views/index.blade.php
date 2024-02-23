@@ -7,7 +7,7 @@
 <section class="hero">
     <div class="hero-inner">
         <h1>VAL HAINAUT AUTO</h1>
-        <h4>Où chaque véhicule d'occasion raconte une histoire de qualité et de fiabilité. Découvrez la route vers votre prochaine aventure automobile avec nous ...</h4>
+        <h4>Fait toujours le suivi de ses clients. Vous êtes prioritaires.</h4>
         <a class="button-hero" href="#propos-id">COMMENCER</a>
     </div>
 </section>

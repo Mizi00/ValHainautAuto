@@ -14,14 +14,17 @@
         @forelse($annonces as $annonce)
         <li class="cards-item">
             <div class="card">
-                <div class="card-image"><img src="{{ asset('storage/uploads'.$annonce->img) }}" alt=""></div>
+                <div class="card-image"><img src="{{ asset('storage/uploads/'.$annonce->img) }}" alt=""></div>
                 <div class="card-content">
                     <div>
                         <h2 class="card-title">{{ $annonce->titre }}</h2>
                         <ul class="card-list">
-                            <li>Modèle: {{ $annonce->modele }}</li>
-                            <li>Année: {{ $annonce->annee }}</li>
-                            <li>Cv: {{ $annonce->chevaux }}</li>
+                            <li><i class="fa-solid fa-list"></i> Modèle: {{ $annonce->modele }}</li>
+                            <li><i class="fa-solid fa-calendar-days"></i> Année: {{ $annonce->annee }}</li>
+                            <li>Kilométrage: <strong>{{ $annonce->kilometrage }} Km</strong></li>
+                            <li>{{ $annonce->cv }} Cv</li   >
+                            <li>{{ $annonce->ch }} Ch</li>
+                            <li>Type boîte: {{ $annonce->vitesse }}</li>
                             <li>Carburant: {{ $annonce->typeFuel }}</li>
                             <li>Montant: {{ $annonce->prix }} €</li>
                         </ul>

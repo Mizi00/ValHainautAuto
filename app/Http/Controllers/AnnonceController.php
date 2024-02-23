@@ -67,10 +67,9 @@ class AnnonceController extends Controller
             'img' => 'required|image|mimes:jpeg,png,jpg|max:5000'
         ]);
 
-        $img = $request->file('img');
 
-        if($request->hasFile('image')){
-            $originalImage = $request->file('image');
+        if($request->hasFile('img')){
+            $originalImage = $request->file('img');
 
             $fileName = md5(time() . $originalImage->getClientOriginalName());
             Image::read($originalImage)->toWebP(85)->save("storage/uploads/{$fileName}.webp");
@@ -79,6 +78,7 @@ class AnnonceController extends Controller
         }
 
         $credentials['idUser'] = auth()->user()->id;
+        $credentials['img'] = $imagePath;
         $credentials['created_at'] = Carbon::now();
 
         $annonce->insert($credentials);
