@@ -22,22 +22,22 @@
             <div class="div-form-container">
                 <div class="div-form">
                     <label for="">Nom / Titre:</label>
-                    <input type="text" name="titre" autocomplete="off">
+                    <input type="text" value="{{ old('titre') }}" name="titre" autocomplete="off">
                 </div>
                 <div class="div-form">
                     <label for="">Prix:</label>
-                    <input type="number" step="0.01" name="prix" autocomplete="off">
+                    <input type="number" value="{{ old('prix') }}" step="0.01" name="prix" autocomplete="off">
                 </div>
             </div>
 
             <div class="div-form-container">
                 <div class="div-form">
                     <label for="">Modèle:</label>
-                    <input type="text" name="modele" autocomplete="off">
+                    <input type="text" value="{{ old('modele') }}" name="modele" autocomplete="off">
                 </div>
                 <div class="div-form">
                     <label for="">Kilométrage:</label>
-                    <input type="number" name="kilometrage" min="0" autocomplete="off">
+                    <input type="number" value="{{ old('kilometrage') }}" name="kilometrage" min="0" autocomplete="off">
                 </div>
             </div>
 
@@ -73,14 +73,14 @@
                 </div>
                 <div class="div-form">
                     <label for="">Ch:</label>
-                    <input type="number" name="ch" min="0" autocomplete="off">
+                    <input type="number" value="{{ old('ch') }}" name="ch" min="0" autocomplete="off">
                 </div>
 
             </div>
             <div class="div-form-container">
                 <div class="div-form">
                     <label for="">URL annonce: </label>
-                    <input type="url" name="url" value="" placeholder="Ex: https://johndoe.exemple" autocomplete="off">
+                    <input type="text" name="url" value="{{ old('url') }}" placeholder="Ex: https://johndoe.exemple" autocomplete="off">
                 </div>
                 <div class="div-form">
                     <label for="">Type de boîte: </label>

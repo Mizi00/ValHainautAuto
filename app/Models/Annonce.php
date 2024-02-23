@@ -9,5 +9,5 @@ class Annonce extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['titre', 'prix', 'modele', 'annee', 'kilometrage', 'chevaux', 'typeFuel', 'url', 'description'];
+    protected $fillable = ['titre', 'prix', 'modele', 'annee', 'kilometrage', 'chevaux', 'typeFuel', 'url', 'img']; //pour edit en masse des attribu
 }
