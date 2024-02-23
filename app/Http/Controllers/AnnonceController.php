@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\Annonce;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Laravel\Facades\Image;
 
 class AnnonceController extends Controller
@@ -27,7 +28,7 @@ class AnnonceController extends Controller
     }
 
     public function update(Annonce $annonce, Request $request)
-    {
+    {   
         $credentials =  $request->validate([
             'titre' => 'required',
             'prix' => 'required',
@@ -37,8 +38,23 @@ class AnnonceController extends Controller
             'cv' => 'required',
             'ch' => 'required',
             'typeFuel' => 'required',
-            'url' => 'required'
+            'url' => 'required',
+            'img'=> 'image|mimes:jpeg,png,jpg|max:5000'
         ]);
+
+        
+        if($request->hasFile('img')){
+            $originalImage = $request->file('img');
+
+            $fileName = md5(time() . $originalImage->getClientOriginalName());
+            Image::read($originalImage)->toWebP(85)->save("storage/uploads/{$fileName}.webp");
+
+            $imagePath = "{$fileName}.webp";
+        }
+
+        $credentials['idUser'] = auth()->user()->id;
+        $credentials['img'] = $imagePath;
+        $credentials['created_at'] = Carbon::now();
 
         $annonce->update($credentials);
 
@@ -87,7 +103,10 @@ class AnnonceController extends Controller
     }
 
     public function delete(Annonce $annonce)
-    {
+    {   
+        if($annonce->img) {
+            Storage::disk('public')->delete('uploads/'.$annonce->img);
+        }
         $annonce->delete();
         return redirect()->route('annonce.index')->with('delete', 'Annonce supprimé !');
     }

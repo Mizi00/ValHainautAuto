@@ -19,14 +19,14 @@
                     <div>
                         <h2 class="card-title">{{ $annonce->titre }}</h2>
                         <ul class="card-list">
-                            <li><i class="fa-solid fa-list"></i> Modèle: {{ $annonce->modele }}</li>
-                            <li><i class="fa-solid fa-calendar-days"></i> Année: {{ $annonce->annee }}</li>
+                            <li><i class="fa-solid fa-list"></i> | Modèle: <strong>{{ $annonce->modele }}</strong></li>
+                            <li><i class="fa-solid fa-calendar-days"></i> | Année: <strong>{{ $annonce->annee }}</strong></li>
                             <li><i class="fa-solid fa-gauge"></i> Kilométrage: <strong>{{ $annonce->kilometrage }} Km</strong></li>
-                            <li><i class="fa-solid fa-scale-unbalanced-flip"></i> Puissance fiscal: {{ $annonce->cv }} Cv</li   >
-                            <li><i class="fa-solid fa-car"></i> Puissance DIN: {{ $annonce->ch }} Ch</li>
-                            <li><i class="fa-solid fa-gears"></i> Type boîte: {{ $annonce->vitesse }}</li>
-                            <li><i class="fa-solid fa-gas-pump"></i> Carburant: {{ $annonce->typeFuel }}</li>
-                            <li><i class="fa-solid fa-tags"></i> Montant: {{ $annonce->prix }} €</li>
+                            <li><i class="fa-solid fa-scale-unbalanced-flip"></i> Puissance fiscal: <strong>{{ $annonce->cv }} Cv</strong></li   >
+                            <li><i class="fa-solid fa-car"></i> Puissance DIN: <strong>{{ $annonce->ch }} Ch</strong></li>
+                            <li><i class="ti ti-manual-gearbox"></i> Type boîte: <strong>{{ $annonce->vitesse }}</strong></li>
+                            <li><i class="fa-solid fa-gas-pump"></i> Carburant: <strong>{{ $annonce->typeFuel }}</strong></li>
+                            <li><i class="fa-solid fa-tags"></i> Montant: <strong>{{ $annonce->prix }} €</strong></li>
                         </ul>
                         <p class="card-text">{{ Str::limit($annonce->description, 50) }}</p>
                     </div>

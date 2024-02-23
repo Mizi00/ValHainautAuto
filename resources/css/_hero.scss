@@ -50,14 +50,16 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
+        transition: background-color 0.3s ease;
 
         i{
             font-size: 22px;
         }
 
-        &-button:hover {
-            text-decoration: underline;
+        &:hover {
+            background-color: #222030;
         }
+        
 
 
     }

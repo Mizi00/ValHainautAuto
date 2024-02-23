@@ -8,7 +8,7 @@
     <div class="hero-inner">
         <h1>VAL HAINAUT AUTO</h1>
         <h4>Fait toujours le suivi de ses clients. Vous êtes prioritaires.</h4>
-        <div class="button-hero"><a class="button-hero-button   " href="#propos-id">Débuter</a><i class="fa-solid fa-arrow-down"></i></div>
+        <a class="button-hero-button" href="#propos-id"><div class="button-hero">Voir Plus<i class="fa-solid fa-arrow-down"></i></div></a>
     </div>
 </section>
 

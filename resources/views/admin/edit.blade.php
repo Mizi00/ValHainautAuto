@@ -18,7 +18,7 @@
                 </ul>
             </div>
             @endif
-            <form action="{{ route('annonce.update', $annonce->id) }}" method="post">
+            <form action="{{ route('annonce.update', $annonce->id) }}" method="post" enctype="multipart/form-data">
                 @method('patch')
                 @csrf
                 <div class="div-form-container">
