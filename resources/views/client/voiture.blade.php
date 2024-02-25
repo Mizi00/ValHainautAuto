@@ -37,7 +37,7 @@
         </li>
         @empty
         <div class="empty-card">
-                 <div><i class="fa-solid fa-question"></i></div>
+                 <div><i class="fa-solid fa-face-meh"></i></div>
             <p>Pas de véhicule pour l'instant ...</p>
         </div>
 

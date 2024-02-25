@@ -70,6 +70,7 @@
                 vertical-align: top;
                 border-top: 1px solid #cdd4e0;
                 text-align: left;
+                font-size: 16px;
             }
 
 
@@ -100,12 +101,12 @@
             margin-top: 20px;
         }
 
-        .div-search{
+        .div-search {
             display: flex;
             justify-content: end;
             margin-bottom: 20px;
 
-            .search-annonce {
+            .search-contact {
                 padding: 10px;
                 border: 2px solid grey;
                 border-radius: 3px;

@@ -25,8 +25,13 @@ class ContactController extends Controller
         $contact->insert($credentials); 
         
 
-        return redirect()->route('contact')->with('success', 'Formulaire envoyer !');
+        return redirect()->route('contact.index')->with('success', 'Formulaire envoyer !');
 
         
-    }   
+    }  
+    
+    public function delete(Contact $contact) {
+        $contact->delete();
+        return redirect()->route('contact.index')->with('delete', 'Message Supprimer');
+    }
 }

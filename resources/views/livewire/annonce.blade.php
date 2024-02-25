@@ -10,8 +10,8 @@
             <th>Modèle</th>
             <th>Année</th>
             <th>Kilométrage</th>
-            <th>CV</th>
-            <th>CH</th>
+            <th>Puissance Fiscal</th>
+            <th>Puissance DIN</th>
             <th>Carburant</th>
             <th>URL</th>
             <th>Date</th>

@@ -42,8 +42,13 @@ Route::middleware('auth')->group(function(){
 
         
     });     
+
+    Route::prefix('contact')->name('contact.')->controller(ContactController::class)->group(function(){
+        Route::view('/admin', 'admin.contact')->name('index');
+        Route::get('/delete/{contact}', 'delete')->name('delete');    
+    });
     
-    Route::view('admin_message', 'admin.contact')->name('messageAdmin');
+    
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
