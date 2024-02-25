@@ -14,6 +14,6 @@
 
 </div>
 <x-scrollup />
-<x-footer fixed="{{ $annonces->isEmpty() ? 'true' : 'false' }}" />
+<x-footer />
 
 @endsection
