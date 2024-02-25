@@ -26,8 +26,7 @@ class ContactController extends Controller
         $credentials['created_at'] = Carbon::now();
         $contact->insert($credentials);
 
-
-        return redirect()->route('contact.index')->with('success', 'Formulaire envoyer !');
+        return redirect()->route('contact')->with('success', 'Merci pour votre message !');
     }
 
     public function show(Contact $contact)

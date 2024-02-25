@@ -15,9 +15,9 @@
     margin-bottom: 100px;
 
     &:hover {
-        box-shadow: 0 8px 16px 0 rgba(	30.165, -1.925, -14.942, 0.2);
-        transition: $hoverTransition;
-        
+        box-shadow: 0 8px 16px 0 rgba(30.165, -1.925, -14.942, 0.2);
+        //transition: $hoverTransition;
+
     }
 
     form {
@@ -29,22 +29,24 @@
         margin-top: 30px;
         color: #fff;
 
-        &::after{
+        &::after {
             content: "";
             height: 1.5px;
             width: 100px;
-            margin:  2rem auto;
+            margin: 2rem auto;
             display: block;
-            background-color: #fff  ;
+            background-color: #fff;
         }
     }
+
+    .success-contact {}
 
 
     &-np {
         display: flex;
         gap: 5rem;
         align-items: center;
-        
+
 
 
         label {
@@ -70,7 +72,7 @@
         /* Bottom margin */
         resize: vertical;
         /* Allow the user to vertically resize the textarea (not horizontally) */
-        background-color: #Fff   ;
+        background-color: #Fff;
 
     }
 
@@ -87,8 +89,32 @@
 
         &:hover {
             background-color: $black-color;
-            
+
         }
     }
 
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    .alert-danger {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: red;
+        color: #fff;
+        //justify-content: center;
+        //margin-top: 95px;
+        margin-bottom: 10px;
+        padding: 10px 0;
+        width: 100%;
+        max-width: 500px;
+        align-items: center;
+        border-radius: 5px;
+
+        li {
+            font-size: 15px;
+        }
+
+    }
 }

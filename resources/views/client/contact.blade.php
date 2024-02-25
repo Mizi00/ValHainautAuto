@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('body')
-<x-navbar/>
+<x-navbar />
 <!--SECTION CONTACT-->
+
 <div class="contact">
     <h1>Contactez-Nous !</h1>
+
     <form action="{{ route('contact') }}" method="post">
         @csrf
         <div class="contact-np">
@@ -16,13 +18,38 @@
         <label for="">Votre Message :
             <textarea name="message" id="msg" placeholder="Ecrire ici ..." style="height:200px"></textarea>
         </label>
-        @if(session()->has('success'))
-            <div class="success-contact">{{ session('success') }}</div>
-        @endif
+        <div class="error">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+        </div>
         <input type="submit" name="Envoyer" id="button">
     </form>
+
 </div>
 
-<x-footer/> 
+@if(session('success'))
+@section('js')
+<script>
+    butterup.toast({
+        title: 'Val Hainaut Auto',
+        message: '{{ session('
+        success ') }}',
+        location: 'top-right',
+        icon: true,
+        dismissable: false,
+        type: 'success'
+    });
+</script>
+@endsection
+@endif
+
+<x-footer />
 
 @endsection
