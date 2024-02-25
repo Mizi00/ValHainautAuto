@@ -18,7 +18,28 @@
     }
 }
 
+.cards-contain {
+    margin-bottom: 25px;
 
+    .search-annonce {
+        display: flex;
+        justify-content: end;
+        margin-right: 15px;
+        margin-bottom: 55px;
+
+        input {
+            padding: 10px 15px;
+            border: 2px solid $greyText;
+            border-radius: 3px
+        };
+    }
+
+    .pagination-annonce {
+        .pagination-container {
+            justify-content: space-around;
+        }
+    }
+}
 .cards {
     display: flex;
     justify-content: center;

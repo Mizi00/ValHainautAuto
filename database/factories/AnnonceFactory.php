@@ -33,6 +33,7 @@ class AnnonceFactory extends Factory
             'ch'=> fake()->numberBetween(50, 1000),
             'typeFuel' => fake()->randomElement($typesCarburant),
             'url' => fake()->imageUrl(),
+            'img' => fake()->imageURL($width = 600, $height = 500),
             'kilometrage' => fake()->randomNumber(1, 1000000)
         ];
     }
