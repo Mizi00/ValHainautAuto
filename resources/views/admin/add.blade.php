@@ -51,10 +51,10 @@
                     </select>
                 </div>
                 <div class="div-form">
-                    <label for="">Cv:</label>
+                    <label for="">Puissance Fiscale:</label>
                     <select name="cv" id="">
                         <option value="">---Selectionner---</option>
-                        @for($i=1; $i<=100; $i++) <option value="{{ $i }}">{{ $i }}</option>
+                        @for($i=1; $i<=15; $i++) <option value="{{ $i }}">{{ $i }}</option>
                             @endfor
                     </select>
                 </div>
@@ -72,7 +72,7 @@
                     </select>
                 </div>
                 <div class="div-form">
-                    <label for="">Ch:</label>
+                    <label for="">Puissance DIN:</label>
                     <input type="number" value="{{ old('ch') }}" name="ch" min="0" autocomplete="off">
                 </div>
 

@@ -56,7 +56,6 @@ class AnnonceController extends Controller
         $credentials['idUser'] = auth()->user()->id;
         $credentials['img'] = $imagePath ?? null;
         $credentials['created_at'] = Carbon::now();
-        //dd($credentials);
         $annonce->update($credentials);
 
         return redirect()->route('annonce.index')->with('success', 'Annonce modifié avec succées');

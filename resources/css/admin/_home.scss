@@ -1,4 +1,4 @@
-.main-home-admin {
+.main-home {
     margin-left: $sidebar-width;
 
     .header-admin {
@@ -30,5 +30,44 @@
         }
 
 
+    }
+
+    &-body{
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        h1 {
+            font-size: 45px;
+            text-decoration: underline;
+        }
+
+        p{
+            font-size: 15px;
+            font-weight: bold;
+            color: $default-color;
+        }
+
+        &-inner{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            h4 {
+                font-size: 20px;
+                text-decoration: underline;
+            }
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                li {
+                    font-size: 17px;
+                }
+            }
+        }
     }
 }

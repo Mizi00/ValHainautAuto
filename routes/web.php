@@ -21,7 +21,7 @@ Route::view('/', 'index')->name('home');
 
 Route::prefix('/login')->middleware('guest')->group(function(){
     Route::get('/', [AuthController::class, 'index'])->name('login');
-    Route::post('/', [AuthController::class, 'authenticate']);
+    Route::post('/', [AuthController::class, 'authenticate'])->middleware('throttle:5,1');
 });
 
 Route::middleware('auth')->group(function(){
