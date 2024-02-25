@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('prenom', 50);
             $table->string('mail', 255);
             $table->string('numero', 10);
-            $table->string('message', 1000);
+            $table->text('message');
         });
     }
 

@@ -21,11 +21,11 @@
                 <td><a href="mailto:{{ $contact->mail }}">{{ $contact->mail }}</a></td>
                 <td>{{ $contact->numero }}</td>
                 <td>{{ $contact->message }}</td>
-                <td><a href=""><i class="fa-solid fa-comment"></i></a> <a href="{{ route('contact.delete', $contact->id) }}"><i class="fa-solid fa-trash"></i></a></td>
+                <td><a href="{{ route('contact.show', $contact->id) }}"><i class="fa-solid fa-comment"></i></a> <a href="{{ route('contact.delete', $contact->id) }}"><i class="fa-solid fa-trash"></i></a></td>
             </tr>
             @empty
             <tr>
-                <td colspan="11">Aucune message ...</td>
+                <td colspan="11">Aucun message ...</td>
             </tr>
             @endforelse
 
