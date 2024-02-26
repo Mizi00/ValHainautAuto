@@ -7,15 +7,6 @@
         <h1>Ajouter une annonce</h1>
     </div>
     <div class="inner-text-edit-annonce">
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
         <form action="{{ route('annonce.validateAdd') }}" method="post" enctype="multipart/form-data">
             @method('patch')
             @csrf
@@ -95,7 +86,19 @@
                     <label for=""><i class="fa-solid fa-upload"></i> Choisir le fichier</label>
                     <input type="file" name="img" accept="image/png, image/jpeg">
                 </div>
-            </div>  
+            </div>
+            <div class="error">
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+            </div>
+
             <div class="div-form-bt">
                 <input type="submit" value="Ajouter">
             </div>
