@@ -2,6 +2,7 @@
 
 @section('body')
 <x-navbar />
+<x-sidebar />
 
 <!--SECTION HERO-->
 <section class="hero">

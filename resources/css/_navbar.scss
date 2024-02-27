@@ -8,10 +8,7 @@ h3,
 a {
     color: #ffff;
     text-decoration: none;
-
-    &:hover {
-        transition: all 0.3s ease-in-out;
-    }
+    transition: all 0.3s ease-in-out;
 }
 
 .dc-button {
@@ -83,7 +80,10 @@ a {
     font-size: .99em;
     position: relative;
 
-    &::before {
+    span {
+        position: relative;
+    }
+    span::before {
         content: "";
         position: absolute;
         bottom: -3.5px;
@@ -95,7 +95,7 @@ a {
     }
 
     &:hover{
-        &::before {
+        span::before {
             width: 100%;
         }
     }

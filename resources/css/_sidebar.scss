@@ -1,0 +1,61 @@
+.sidebar-client {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    padding: 15px;
+
+    background-color: $default-color;
+
+    z-index: 200;
+
+    @media screen and (max-width: 1024px) {
+        &.show {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        width: 200px;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .main-nav a {
+        padding: 10px 15px;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+    }
+
+    .main-nav a {
+        color: #fff;
+    }
+
+    .main-nav a:hover {
+        color: rgb(167, 165, 165);
+    } 
+}
+.mask {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.60);
+        z-index: 199;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+
+        @media screen and (max-width: 1024px) {
+            &.show {
+                display: block;
+            }
+        }
+
+    }
