@@ -37,7 +37,7 @@
                     <label for="">Année:</label>
                     <select name="annee" id="">
                         <option value="">---Selectionner---</option>
-                        @for($i=1990; $i<=2200; $i++) <option value="{{ $i }}">{{ $i }}</option>
+                        @for($i=1990; $i<=now()->year; $i++) <option value="{{ $i }}" {{ old('annee') == $i ? 'selected' : '' }}>{{ $i }}</option>
                             @endfor
                     </select>
                 </div>
@@ -45,7 +45,7 @@
                     <label for="">Puissance Fiscale:</label>
                     <select name="cv" id="">
                         <option value="">---Selectionner---</option>
-                        @for($i=1; $i<=15; $i++) <option value="{{ $i }}">{{ $i }}</option>
+                        @for($i=1; $i<=15; $i++) <option value="{{ $i }}" {{ old('cv') == $i ? 'selected' : '' }}>{{ $i }}</option>
                             @endfor
                     </select>
                 </div>
@@ -56,10 +56,10 @@
                     <label for="">Type carburant:</label>
                     <select name="typeFuel" id="">
                         <option value="">---Sectionner---</option>
-                        <option value="Essence">Essence</option>
-                        <option value="Diesel">Diesel</option>
-                        <option value="Éléctrique">Éléctrique</option>
-                        <option value="Hybride">Hybride</option>
+                        <option value="Essence" {{ old('typeFuel') == 'Essence' ? 'selected' : '' }}>Essence</option>
+                        <option value="Diesel" {{ old('typeFuel') == 'Diesel' ? 'selected' : '' }}>Diesel</option>
+                        <option value="Éléctrique" {{ old('typeFuel') == 'Éléctrique' ? 'selected' : '' }}>Éléctrique</option>
+                        <option value="Hybride" {{ old('typeFuel') == 'Hybrique' ? 'selected' : '' }}>Hybride</option>
                     </select>
                 </div>
                 <div class="div-form">
@@ -76,9 +76,9 @@
                 <div class="div-form">
                     <label for="">Type de boîte: </label>
                     <select name="vitesse" id="">
-                        <option value="Manuelle">Manuelle</option>
-                        <option value="Automatique">Automatique</option>
-                    </select>
+                        <option value="Manuelle" {{ old('vitesse') == 'Manuelle' ? 'selected' : '' }}>Manuelle</option>
+                        <option value="Automatique" {{ old('vitesse') == 'Automatique' ? 'selected' : '' }}>Automatique</option>
+                    </select> 
                 </div>
             </div>
             <div class="div-form-container">

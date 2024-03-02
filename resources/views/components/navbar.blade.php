@@ -7,10 +7,10 @@
         @auth
             <li><a href="{{ route('homeAdmin') }}">Tableau de Bord</a></li>
         @endauth
-        <li><a href="{{ route('home') }}#propos-id">Qui sommes-nous</a></li>
-        <li><a href="{{ route('home') }}#service-id">Nos services</a></li>
-        <li><a href="{{ route('voiture') }}">Véhicules</a></li>
-        <li><a href="{{ route('contact') }}">Contact</a></li>
+        <li><a href="{{ route('home') }}#propos-id"><span>Qui sommes-nous</span></a></li>
+        <li><a href="{{ route('home') }}#service-id"><span>Nos services</span></a></li>
+        <li><a href="{{ route('voiture') }}"><span>Véhicules</span></a></li>
+        <li><a href="{{ route('contact') }}"><span>Contact</span></a></li>
     </ul>
     <div class="button-sidebar" id="button-sidebar"><a><i class="fa-solid fa-bars"></i></a></div>
 </header>

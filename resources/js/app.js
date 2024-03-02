@@ -16,12 +16,12 @@ window.addEventListener('scroll', scrollTop);
 document.addEventListener('DOMContentLoaded', scrollTop);
 
 //Fonction sidebar qui la fait apparaitre
-
+const cross = document.getElementById('cross');
 const sidebar = document.getElementById('sidebar-client');
 const navBarButton = document.getElementById('button-sidebar');
 const mask = document.getElementById('mask'); //constante du mask vue dans le composant sidebar
 
-if (sidebar && navBarButton && mask) {
+if (sidebar && navBarButton && mask && cross) {
 
     navBarButton.addEventListener('click', () => {
         sidebar.classList.add('show');
@@ -34,4 +34,9 @@ if (sidebar && navBarButton && mask) {
         document.body.style.overflow = "auto";
     });
 
+    cross.addEventListener('click', () =>{
+        sidebar.classList.remove('show');
+        mask.classList.remove('show');
+        document.body.style.overflow = "auto";
+    });
 }

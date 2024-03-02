@@ -11,6 +11,15 @@
 
     z-index: 200;
 
+    &-cross {
+        color: #fff;
+        font-size: 20px;
+
+        i {
+            cursor: pointer;
+        }
+    }
+
     @media screen and (max-width: 1024px) {
         &.show {
             display: block;

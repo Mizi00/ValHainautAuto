@@ -1,4 +1,7 @@
 <div class="sidebar-client" id="sidebar-client">
+    <div class="sidebar-client-cross" >
+        <i class="fa-solid fa-xmark" id="cross"></i>
+    </div>
     <ul class="main-nav">
         @auth
         <li><a href="{{ route('homeAdmin') }}">Tableau de Bord</a></li>
