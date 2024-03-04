@@ -29,7 +29,7 @@
         message: '{{ session('success') ? session('success') : session('delete') }}',
         location: 'top-right',
         icon: false,
-        dismissable: false,
+        dismissable: true,
         type: '{{ session('success') ? 'success' : 'error' }}'
     });
 </script>

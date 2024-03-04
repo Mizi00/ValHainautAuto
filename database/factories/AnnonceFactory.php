@@ -21,6 +21,7 @@ class AnnonceFactory extends Factory
         $marquesVoitures = ['Toyota', 'Honda', 'Ford', 'Chevrolet', 'BMW', 'Mercedes-Benz', 'Audi', 'Volkswagen', 'Tesla', 'Nissan'];
         $typesCarburant = ['Essence', 'Diesel', 'GPL (Gaz de Pétrole Liquéfié)', 'GNV (Gaz Naturel Véhicule)', 'Éléctrique'];
         $vitesse  = ['Automatique', 'Manuelle'];
+        $urlImg = ['img/voiture1.jpg', 'img/voiture2.jpg', 'img/voiture3.jpg'];
 
         return [
             'titre' => fake()->randomElement($automobiles),
@@ -33,7 +34,7 @@ class AnnonceFactory extends Factory
             'ch'=> fake()->numberBetween(50, 1000),
             'typeFuel' => fake()->randomElement($typesCarburant),
             'url' => fake()->imageUrl(),
-            'img' => fake()->imageURL($width = 600, $height = 500),
+            'img' => fake()->randomElement($urlImg),
             'kilometrage' => fake()->randomNumber(1, 1000000)
         ];
     }

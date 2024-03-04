@@ -2,6 +2,7 @@
 
 @section('body')
 <x-navbar />
+<x-sidebar />
 <!--SECTION CONTACT-->
 
 <div class="contact">
@@ -15,13 +16,10 @@
         </div>
         <label for="">Adresse Mail: <input type="text" name="mail" id="email" placeholder="Ex: john@doe.fr"></label>
         <label for="">Numéro de téléphone: <input type="text" name="numero" id="number" placeholder="Ex: 0623431233"></label>
-        {{-- @error('numero')
-            {{ $message }}
-        @enderror --}}
         <label for="">Votre Message :
             <textarea name="message" id="msg" placeholder="Ecrire ici ..." style="height:200px"></textarea>
         </label>
-        <div class="error">
+        <div class="form-error">
             @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -42,8 +40,8 @@
 <script>
     butterup.toast({
         title: 'Val Hainaut Auto',
-        message: '{{ session('
-        success ') }}',
+        message: '{{ session('success') }}',
+        success: true,
         location: 'top-right',
         icon: true,
         dismissable: false,
@@ -53,6 +51,7 @@
 @endsection
 @endif
 
+<x-scrollup />
 <x-footer />
 
 @endsection

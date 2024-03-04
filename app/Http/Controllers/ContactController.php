@@ -19,7 +19,7 @@ class ContactController extends Controller
             'nom' => 'required',
             'prenom' => 'required',
             'mail' => 'required|email',
-            'numero' => 'required',
+            'numero' => 'required|min:10|max:10',
             'message' => 'required|min:5|max:5000'
         ]);
 

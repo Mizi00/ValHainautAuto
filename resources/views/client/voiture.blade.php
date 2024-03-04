@@ -3,6 +3,7 @@
 @section('body')
 
 <x-navbar />
+<x-sidebar />
 
 <div class="card-container">
     <div class="title-voiture">

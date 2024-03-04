@@ -36,9 +36,12 @@
     <div class="service-bk">
         <div class="service-inner">
             <i class="fa-solid fa-handshake-simple" id="icon_handshake"></i>
-            <h1>Service n°1</h1>
+            <h1>Rachat de votre véhicule</h1>
             <div class="service-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam asperiores natus adipisci ab, modi harum deserunt, assumenda ad minus, beatae obcaecati tempora odio repellat facere qui vero nostrum et! Natus.
+                <p>
+
+                    Transformez votre ancien véhicule en opportunité avec Val Hainaut Auto. Notre service de rachat propose une évaluation rapide et équitable, simplifiant le processus pour vous.
+                </p>
             </div>
         </div>
         <div class="service-inner">

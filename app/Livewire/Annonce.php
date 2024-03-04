@@ -16,7 +16,10 @@ class Annonce extends Component
     {
         $annonces = AnnonceModel::query()
             ->when($this->search, function($query){
-                return $query->where('titre', 'like', "%{$this->search}%");
+                $query->where('titre', 'like', "%{$this->search}%");
+                $query->orWhere('id', 'like', "{$this->search}");
+
+                return $query;  
             })->paginate(10);
         
         return view('livewire.annonce', compact('annonces'));

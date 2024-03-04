@@ -16,7 +16,12 @@ class Contact extends Component
     {
         $contacts = ContactModel::query()
             ->when($this->search, function($query){
-                return $query->where('mail', 'like', "%{$this->search}%");
+                $query->where('mail', 'like', "%{$this->search}%");
+                $query->orWhere('prenom', 'like', "%{$this->search}%");
+                $query->orWhere('nom', 'like', "%{$this->search}%");
+                $query->orWhere('numero', 'like', "%{$this->search}%");
+                
+                return $query;
             })->paginate(10);
         
         return view('livewire.contact', compact('contacts'));

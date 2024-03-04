@@ -4,7 +4,7 @@
     </div>
     <ul class="main-nav">
         @auth
-        <li><a href="{{ route('homeAdmin') }}">Tableau de Bord</a></li>
+        <li><a href="{{ route('homeAdmin') }}"><span>Tableau de Bord</span></a></li>
         @endauth
         <li><a href="{{ route('home') }}#propos-id"><span>Qui sommes-nous</span></a></li>
         <li><a href="{{ route('home') }}#service-id"><span>Nos services</span></a></li>
