@@ -20,6 +20,12 @@
         }
     }
 
+    img {
+        width: 220px;
+        position: fixed;
+        bottom: 20px;
+    }
+
     @media screen and (max-width: 1024px) {
         &.show {
             display: block;

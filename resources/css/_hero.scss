@@ -41,7 +41,7 @@
         font-weight: bolder;
         text-transform: uppercase;
         background-color: #151322;
-        border-radius: 5px;
+        border-radius: 15px;
         padding: 20px 15px;
         margin-top: 50px;
         margin-left: auto;
@@ -52,15 +52,47 @@
         gap: 10px;
         transition: background-color 0.3s ease;
 
-        i{
+        i {
             font-size: 22px;
         }
 
         &:hover {
             background-color: #222030;
         }
-        
 
 
+
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .hero-inner {
+        h1 {
+            font-size: 75px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:530px) {
+    .hero-inner {
+        margin: 0 15px;
+        h1 {
+            font-size: 45px;
+        }
+
+        h4 {
+            font-size: 15px;
+        }
+
+        a {
+            .button-hero {
+                padding: 10px 20px;
+                font-size: 15px;
+            }
+        }
     }
 }

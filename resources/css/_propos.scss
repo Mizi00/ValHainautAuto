@@ -56,3 +56,17 @@
     }
 
 }
+
+@media screen and (max-width: 1220px) {
+    .propos-text {
+        margin: 0 15px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .propos-text {
+        p {
+            font-size: 18px !important;
+        }
+    }
+}

@@ -50,7 +50,7 @@ Route::middleware('auth')->group(function(){
         Route::get('/delete/{contact}', 'delete')->name('delete');    
     });
     
-    
+    Route::view('/stats', 'admin.stats')->name('stats');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
 Route::get('contact', [ContactController::class, 'index'])->name('contact');

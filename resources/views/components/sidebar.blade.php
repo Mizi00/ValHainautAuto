@@ -11,5 +11,6 @@
         <li><a href="{{ route('voiture') }}"><span>Véhicules</span></a></li>
         <li><a href="{{ route('contact') }}"><span>Contact</span></a></li>
     </ul>
+    <img src="{{ asset('img/logo-site.png') }}" alt="">
 </div>
 <div class="mask" id="mask"></div> <!--div qui va servir à faire un effet sombre à coté de la sidebar-->

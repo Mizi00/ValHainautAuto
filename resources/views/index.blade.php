@@ -49,7 +49,7 @@
             <h1>Mécanique</h1>
             <div class="service-text">
                 <p>
-                    Val Hainaut Auto prend soin de votre voiture avec expertise. De la mécanique à la carrosserie, notre service de réparation assure une qualité sans compromis. Roulez en toute confiance, car votre satisfaction est notre priorité absolue.
+                    Val Hainaut Auto prend soin de votre voiture avec expertise. Roulez en toute confiance, car votre satisfaction est notre priorité absolue.
                 </p>
             </div>
         </div>
@@ -71,12 +71,12 @@
     <div class="propos-video">
         <h1>En Vidéo...</h1>
         <div class="propos-video-inner">
-            <div class="propos-video-inner-single">
+            <div class="propos-video-inner-single one">
                 <iframe src="https://www.youtube.com/embed/2bvG0jZMqdE" title="VAL HAINAUT AUTO Atelier &amp; Réparation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <hr width="1" size="200" color="black" />
                 <p>Atelier & Réparation </p>
             </div>
-            <div class="propos-video-inner-single">
+            <div class="propos-video-inner-single two">
                 <p>Notre Fonctionnement</p>
                 <hr width="1" size="200" color="black" />
                 <iframe src="https://www.youtube.com/embed/R10Yc3DnZKw" title="Vidéo de présentation   Val Hainaut Auto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
