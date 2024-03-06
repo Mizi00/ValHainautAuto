@@ -129,3 +129,11 @@
         }
     }
 }
+
+@media screen and (max-width: 450px) {
+    .propos-video-inner-single {
+        iframe {
+            height: 350px !important;
+        }
+    }
+}

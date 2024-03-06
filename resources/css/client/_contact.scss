@@ -39,9 +39,6 @@
         }
     }
 
-    .success-contact {}
-
-
     &-np {
         display: flex;
         gap: 5rem;
@@ -122,5 +119,16 @@
             list-style-type: disc;
         }
 
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .contact {
+
+        margin: 50px 10px;
+    }
+    .contact-np {
+        flex-direction: column;
+        gap: 0;
     }
 }
