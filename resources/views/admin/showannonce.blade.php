@@ -8,8 +8,8 @@
             <h1>Annonce n° {{ $annonce->id }} ➜ {{ $annonce->titre }}</h1>
         </div>
         <div class="inner-show-annonce-text">
-            <p><strong>Id Annonce:</strong> {{ $annonce->id }}</p>
-            <p><strong>Nom Véhicule:</strong> {{ $annonce->titre }}</p>
+            <p><strong>Vo Annonce:</strong> {{ $annonce->id }}</p>
+            <p><strong>Marque:</strong> {{ $annonce->titre }}</p>
             <p><strong>Prix Véhicule:</strong> {{ $annonce->prix }}</p>
             <p><strong>Modèle Véhicule:</strong> {{ $annonce->modele }}</p>
             <p><strong>Année Véhicule:</strong> {{ $annonce->annee }}</p>

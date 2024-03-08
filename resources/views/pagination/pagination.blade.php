@@ -1,6 +1,6 @@
 @if ($paginator->hasPages())
     <div class="pagination-container">
-        <div class="pagination-info">Showing {{ $paginator->firstItem() }} to {{ $paginator->lastItem() }} of {{ $paginator->total() }} entries</div>
+        <div class="pagination-info">Affichage de {{ $paginator->firstItem() }} à {{ $paginator->lastItem() }} sur {{ $paginator->total() }} élément(s)</div>
         <nav>
             <ul class="pagination">
                 {{-- Previous Page Link --}}

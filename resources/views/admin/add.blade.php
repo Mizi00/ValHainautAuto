@@ -37,7 +37,8 @@
                     <label for="">Année:</label>
                     <select name="annee" id="">
                         <option value="">---Selectionner---</option>
-                        @for($i=1990; $i<=now()->year; $i++) <option value="{{ $i }}" {{ old('annee') == $i ? 'selected' : '' }}>{{ $i }}</option>
+                        @for($i=1990; $i<=now()->year; $i++)
+                            <option value="{{ $i }}" {{ old('annee') == $i ? 'selected' : '' }}>{{ $i }}</option>
                             @endfor
                     </select>
                 </div>
@@ -79,7 +80,7 @@
                         <option value="Manuelle" {{ old('vitesse') == 'Manuelle' ? 'selected' : '' }}>Manuelle</option>
                         <option value="Automatique" {{ old('vitesse') == 'Automatique' ? 'selected' : '' }}>Automatique</option>
                         <option value="Robotisé" {{ old('vitesse') == 'Robotisé' ? 'selected' : '' }}>Robotisé</option>
-                    </select> 
+                    </select>
                 </div>
             </div>
             <div class="div-form-container">
@@ -88,7 +89,7 @@
                     <input type="file" name="img" accept="image/png, image/jpeg">
                 </div>
             </div>
-            <div class="error">
+            <div class="form-error">
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -99,7 +100,6 @@
                 </div>
                 @endif
             </div>
-
             <div class="div-form-bt">
                 <input type="submit" value="Ajouter">
             </div>

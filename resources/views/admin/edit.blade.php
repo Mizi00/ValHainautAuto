@@ -14,7 +14,7 @@
                 @csrf
                 <div class="div-form-container">
                     <div class="div-form">
-                        <label for="">Nom / Titre:</label>
+                        <label for="">Marque:</label>
                         <input type="text" name="titre" value="{{ $annonce->titre }}">
                     </div>
                     <div class="div-form">
@@ -40,7 +40,7 @@
                         <select name="annee" id="">
                             <option value="{{ $annonce->annee }}">{{ $annonce->annee }}</option>
                             <option value="">------</option>
-                            @for($i=1900; $i<=2200; $i++) @if($annonce->annee !=$i)
+                            @for($i=1900; $i<=now()->year; $i++) @if($annonce->annee !=$i)
                                 <option value="{{ $i }}">{{ $i }}</option>
                                 @endif
                                 @endfor
