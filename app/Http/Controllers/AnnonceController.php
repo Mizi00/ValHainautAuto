@@ -28,7 +28,7 @@ class AnnonceController extends Controller
     public function update(Annonce $annonce, Request $request)
     {   
         $credentials =  $request->validate([
-            'titre' => 'required|min:5|max:100',
+            'titre' => 'required|max:50',
             'prix' => 'required',
             'modele' => 'required',
             'annee' => 'required',
@@ -70,9 +70,9 @@ class AnnonceController extends Controller
     {
         
         $credentials = $request->validate([
-            'titre' => 'required',
+            'titre' => 'required|max:50',
             'prix' => 'required',
-            'modele' => 'required',
+            'modele' => 'required|max:50',
             'annee' => 'required',
             'kilometrage' => 'required',
             'cv' => 'required',
