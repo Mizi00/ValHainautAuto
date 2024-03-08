@@ -152,6 +152,17 @@
                     margin-bottom: 15px;
                 }
 
+                .card-date {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 5px;
+
+                    span {
+                        color: #fff;
+                    }
+                }
+
                 .card-button {
                     color: #ffffff;
                     padding: 0.8rem;

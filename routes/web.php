@@ -53,6 +53,7 @@ Route::middleware('auth')->group(function(){
     Route::view('/stats', 'admin.stats')->name('stats');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
+Route::view('/mention', 'client.mention')->name('mention');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact', [ContactController::class, 'validateContact']);
 Route::get('voiture', [VoitureController::class, 'index'])->name('voiture'); 

@@ -11,8 +11,8 @@
                     <div>
                         <h2 class="card-title">{{ $annonce->titre }}</h2>
                         <ul class="card-list">
-                            <li><i class="fa-solid fa-list"></i> | Modèle: <strong>{{ $annonce->modele }}</strong></li>
-                            <li><i class="fa-solid fa-calendar-days"></i> | Année: <strong>{{ $annonce->annee }}</strong></li>
+                            <li><i class="fa-solid fa-list"></i> Modèle: <strong>{{ $annonce->modele }}</strong></li>
+                            <li><i class="fa-solid fa-calendar-days"></i> Année: <strong>{{ $annonce->annee }}</strong></li>
                             <li><i class="fa-solid fa-gauge"></i> Kilométrage: <strong>{{ $annonce->kilometrage }} Km</strong></li>
                             <li><i class="fa-solid fa-scale-unbalanced-flip"></i> Puissance fiscal: <strong>{{ $annonce->cv }} Cv</strong></li>
                             <li><i class="fa-solid fa-car"></i> Puissance DIN: <strong>{{ $annonce->ch }} Ch</strong></li>
@@ -20,6 +20,9 @@
                             <li><i class="fa-solid fa-gas-pump"></i> Carburant: <strong>{{ $annonce->typeFuel }}</strong></li>
                             <li><i class="fa-solid fa-tags"></i> Prix: <strong>{{ $annonce->prix }} €</strong></li>
                         </ul>
+                        <div class="card-date">
+                            <span>Publié le {{ Carbon\Carbon::parse($annonce->created_at)->isoFormat('DD/MM/G à HH:mm')  }}</span>
+                        </div>
                     </div>
 
                     <a href="{{ $annonce->url }}" target="_blank"><button class="card-button">Voir Plus</button></a>

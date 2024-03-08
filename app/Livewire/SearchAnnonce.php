@@ -15,7 +15,7 @@ class SearchAnnonce extends Component
         $annonces = $annonces = Annonce::query()
             ->when($this->search, function ($query) {
                 return $query->where('titre', 'like', "%{$this->search}%");
-            })->paginate(12);
+            })->latest()->paginate(12);
         return view('livewire.search-annonce', compact('annonces'));
     }
 }

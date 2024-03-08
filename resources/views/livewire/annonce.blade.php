@@ -30,7 +30,7 @@
                 <td>{{ $annonce->typeFuel }}</td>
                 <td>{{ $annonce->prix }}€</td>
                 <td><a href="{{ $annonce->url }}" target="_blank">{{ $annonce->url }}</a></td>
-                <td>{{ $annonce->created_at }}</td>
+                <td>{{ Carbon\Carbon::parse($annonce->created_at)->isoFormat('DD/MM/G à HH:mm')  }}</td>
                 <td class="tb-td-link"><a href="{{ route('annonce.show', $annonce->id) }}"><i class="fa-regular fa-eye"></i></a> <a href="{{ route('annonce.delete', $annonce->id) }}"><i class="fa-regular fa-trash-can"></i></a></td>
             </tr>
             @empty  

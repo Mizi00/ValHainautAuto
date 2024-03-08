@@ -1,0 +1,33 @@
+.mention-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    
+    background: linear-gradient(rgba(4, 43, 128, 0.295), rgb(7, 97, 172));
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    h1 {
+        font-size: 55px;
+        text-transform: uppercase;
+    }
+}
+
+.mention-content {
+    padding: 15px 20px;
+    background-color: $grey;
+    h2, a {
+        color: black;
+    }
+    h2 {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    
+}
