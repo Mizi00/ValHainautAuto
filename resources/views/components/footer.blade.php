@@ -9,7 +9,9 @@
 
     </div>
     <div class="footer-inner-center">
-        <span>@Created By Toufik</span>
+        <span></span>
+        <span>©Created By Toufik</span>
+        <span><a href="">mention légale</a></span>
     </div>
     <div class="footer-inner-right">
         <h2>Nos Réseaux</h2>
