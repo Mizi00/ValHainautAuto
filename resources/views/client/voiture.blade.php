@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('vehicule')
+    <meta name="description" content="Retrouvez nos véhicules en vente en temps réel chez Val Hainaut Auto">
+@endsection
+
 @section('body')
 
 <x-navbar />

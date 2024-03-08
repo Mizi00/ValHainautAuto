@@ -125,7 +125,9 @@
 @media screen and (max-width: 1024px) {
     .contact {
 
-        margin: 50px 10px;
+        //margin: 50px 10px;
+        border-radius: 0;
+        margin: 20px 0 !important;
     }
     .contact-np {
         flex-direction: column;

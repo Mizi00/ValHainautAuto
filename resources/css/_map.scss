@@ -131,9 +131,16 @@
 }
 
 @media screen and (max-width: 450px) {
+    .propos-video-inner {
+        padding: 10px 10px !important;
+    }
     .propos-video-inner-single {
         iframe {
             height: 350px !important;
+        }
+        p {
+            text-align: center;
+            width: 100%;
         }
     }
 }

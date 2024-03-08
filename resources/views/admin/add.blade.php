@@ -12,7 +12,7 @@
             @csrf
             <div class="div-form-container">
                 <div class="div-form">
-                    <label for="">Nom / Titre:</label>
+                    <label for="">Marque:</label>
                     <input type="text" value="{{ old('titre') }}" name="titre" autocomplete="off">
                 </div>
                 <div class="div-form">
@@ -78,6 +78,7 @@
                     <select name="vitesse" id="">
                         <option value="Manuelle" {{ old('vitesse') == 'Manuelle' ? 'selected' : '' }}>Manuelle</option>
                         <option value="Automatique" {{ old('vitesse') == 'Automatique' ? 'selected' : '' }}>Automatique</option>
+                        <option value="Robotisé" {{ old('vitesse') == 'Robotisé' ? 'selected' : '' }}>Robotisé</option>
                     </select> 
                 </div>
             </div>

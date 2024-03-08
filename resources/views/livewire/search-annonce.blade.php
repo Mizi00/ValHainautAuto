@@ -18,7 +18,7 @@
                             <li><i class="fa-solid fa-car"></i> Puissance DIN: <strong>{{ $annonce->ch }} Ch</strong></li>
                             <li><i class="ti ti-manual-gearbox"></i> Type boîte: <strong>{{ $annonce->vitesse }}</strong></li>
                             <li><i class="fa-solid fa-gas-pump"></i> Carburant: <strong>{{ $annonce->typeFuel }}</strong></li>
-                            <li><i class="fa-solid fa-tags"></i> Montant: <strong>{{ $annonce->prix }} €</strong></li>
+                            <li><i class="fa-solid fa-tags"></i> Prix: <strong>{{ $annonce->prix }} €</strong></li>
                         </ul>
                     </div>
 

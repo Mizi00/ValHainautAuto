@@ -41,6 +41,12 @@ footer {
         .footer-inner-right {
             align-items: center !important;
 
+            div{
+                margin-right: 0 !important;
+                margin-left: 8px;
+                justify-content: center !important;
+            }
+
             h2::after {
                 width: 150px !important;
                 margin: 10px auto !important;
@@ -142,6 +148,15 @@ footer {
             display: flex;
             flex-direction: column;
             gap: 5px;
+
+            .footer-contact {
+                text-decoration: none;
+
+                &:hover {
+                    color: rgba(161, 161, 161, 0.688);
+                    text-decoration: underline;
+                }
+            }
 
             #pointer_map {
                 margin-left: 4px;

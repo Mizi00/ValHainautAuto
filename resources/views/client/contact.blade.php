@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('contact')
+    <meta name="descrtion" name="Chez Val Hainaut Auto votre avis nous intéresse !">
+@endsection
+
 @section('body')
 <x-navbar />
 <x-sidebar />

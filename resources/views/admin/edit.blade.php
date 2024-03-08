@@ -99,6 +99,9 @@
                             @if($annonce->vitesse !='Automatique')
                             <option value="Automatique">Automatique</option>
                             @endif
+                            @if($annonce->vitesse !='Robotisé')
+                            <option value="Robotisé">Robotisé</option>
+                            @endif
                         </select>
                     </div>
                 </div>
