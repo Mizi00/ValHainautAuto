@@ -34,6 +34,13 @@
 
     @media screen and (max-width: 375px) {
         width: 200px;
+        .main-nav {
+            padding-left: 18px;
+        }
+            img {
+                max-width: 170px !important;
+                width: 100% !important;
+            }
     }
 
     .main-nav {
@@ -43,7 +50,7 @@
     }
 
     .main-nav a {
-        padding: 10px 15px;
+        //padding: 10px 15px;
         text-transform: uppercase;
         text-align: center;
         display: block;
