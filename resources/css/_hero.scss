@@ -9,9 +9,17 @@
     //background
     background: linear-gradient(rgba(0, 0, 0, 0.295), rgba(22, 22, 22, 0.822)), url('../../public/img/garage.jpeg');
     background-size: cover;
-    background-position: 65%;
+    background-position: center;
     background-repeat: no-repeat;
-    //background-attachment: fixed;
+    background-attachment: fixed;
+
+    @media screen and (max-width: 600px) {
+        background-position: 50%;
+    }
+
+    @media screen and (max-width: 400px) {
+        background-position: 70%;
+    }
 
     .hero-inner {
         color: #ffff;
