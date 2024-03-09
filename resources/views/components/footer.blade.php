@@ -11,7 +11,7 @@
     <div class="footer-inner-center">
         <span></span>
         <span>©Created By Toufik</span>
-        <span><a href="{{ route('mention') }}">mention légale</a></span>
+        <span><a href="{{ route('mention') }}" target="_blank">mention légale</a></span>
     </div>
     <div class="footer-inner-right">
         <h2>Nos Réseaux</h2>
