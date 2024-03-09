@@ -62,7 +62,7 @@
         </div>
         <div class="service-inner">
             <i class="fa-solid fa-screwdriver-wrench"></i>
-            <h1>ENTRETIEN / Réparation dignostic</h1>
+            <h1>ENTRETIEN <span>/</span> <span class="tt">-</span> Réparation <span>/</span> <span class="tt">-</span> dignostic</h1>
             <div class="service-text">
                 <p>
                     Votre entretien <strong>complet</strong> en toute tranquilité. Sur véhicule toute marque.

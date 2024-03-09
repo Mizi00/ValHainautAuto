@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', scrollTop);
 const cross = document.getElementById('cross');
 const sidebar = document.getElementById('sidebar-client');
 const navBarButton = document.getElementById('button-sidebar');
+const sideSommes = document.getElementById('side-sommes');
+const sideService = document.getElementById('side-service');
 const mask = document.getElementById('mask'); //constante du mask vue dans le composant sidebar
 
 if (sidebar && navBarButton && mask && cross) {
@@ -34,7 +36,19 @@ if (sidebar && navBarButton && mask && cross) {
         document.body.style.overflow = "auto";
     });
 
-    cross.addEventListener('click', () =>{
+    cross.addEventListener('click', () => {
+        sidebar.classList.remove('show');
+        mask.classList.remove('show');
+        document.body.style.overflow = "auto";
+    });
+
+    sideSommes.addEventListener('click', () => {
+        sidebar.classList.remove('show');
+        mask.classList.remove('show');
+        document.body.style.overflow = "auto";
+    });
+
+    sideService.addEventListener('click', () =>{
         sidebar.classList.remove('show');
         mask.classList.remove('show');
         document.body.style.overflow = "auto";
