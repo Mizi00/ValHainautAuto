@@ -30,6 +30,11 @@ footer {
             .contact-icon{
                 margin-top: 10px;
                 align-items: center;
+                gap: 10px !important;
+
+                .phone {
+                    margin-left: 20px;
+                }
             }
 
             h2::after {

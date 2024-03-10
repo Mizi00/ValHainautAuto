@@ -62,7 +62,7 @@
         </div>
         <div class="service-inner">
             <i class="fa-solid fa-screwdriver-wrench"></i>
-            <h1>ENTRETIEN <span>/</span> <span class="tt">-</span> Réparation <span>/</span> <span class="tt">-</span> dignostic</h1>
+            <h1>ENTRETIEN <span>/</span> <span class="tt">-</span> Réparation <span>/</span> <span class="tt">-</span> diagnostic</h1>
             <div class="service-text">
                 <p>
                     Votre entretien <strong>complet</strong> en toute tranquilité. Sur véhicule toute marque.
@@ -78,7 +78,7 @@
             <h1>GARANTIE</h1>
             <div class="service-text">
                 <p>
-                    Nous <strong>garantissons</strong> tous nos véhicules,<strong>testés</strong> et <strong>reconditionnés</strong> dans nos atelier dédiés.
+                    Nous <strong>garantissons</strong> tous nos véhicules, <strong>testés</strong> et <strong>reconditionnés</strong> dans nos atelier dédiés.
                 </p>
             </div>
         </div>
@@ -89,7 +89,7 @@
 <!--SECTION GOOGLE MAP-->
 <section class="map">
     <div class="propos-video">
-        <h1>En Vidéo...</h1>
+        <h1>Nos Vidéo</h1>
         <div class="propos-video-inner">
             <div class="propos-video-inner-single one">
                 <iframe src="https://www.youtube.com/embed/2bvG0jZMqdE" title="VAL HAINAUT AUTO Atelier &amp; Réparation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

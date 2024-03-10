@@ -2,7 +2,7 @@
     <div class="footer-inner-left">
         <h2>Plus de contact</h2>
         <div class="contact-icon">
-            <span><i class="fas fa-phone"></i>-  <p><a class="footer-contact" href="tel:0678658121">06.78.65.81.21</a> / <a class="footer-contact" href="tel:0982467449">09.82.46.74.49</a></p></span>
+            <span class="phone"><i class="fas fa-phone"></i>-  <p><a class="footer-contact" href="tel:0678658121">06.78.65.81.21</a> / <a class="footer-contact" href="tel:0982467449">09.82.46.74.49</a></p></span>
             <span><i class="fas fa-envelope"></i>-  <p><a class="footer-contact" href="mailto:valhainaut.auto@yahoo.com">valhainaut.auto@yahoo.com</a></p></span>
             <span><i class="fas fa-map-marker-alt" id="pointer_map"></i>-  <p><a href="https://maps.app.goo.gl/qWoPthT6PsC4KABFA" target="_blank">64 Bis Av. du Fbg de Cambrai</a></p></span>
         </div>
