@@ -20,8 +20,9 @@
     <div class="propos-inner" id="propos-id">
         <h1>Qui Sommes-Nous ?</h1>
         <div class="propos-text">
+            <img src="{{ asset('img/bureau-garage.jpg') }}" alt="">
             <p>
-                Cumulant au total plus de <strong>18 années d’expérience</strong> dans l’automobile, <strong>Val Hainaut Auto</strong> a choisi de vous proposer son expertise au profit de ses clients
+                Cumulant au total plus de <strong>18 années d’expérience</strong> dans l’automobile, <strong>Val Hainaut Auto</strong> a choisi de vous proposer son expertise au profit de ses clients.
                 Nous mettons à disposition un service de grande qualité tout en maintenant des prix attractifs.
                 Nos véhicules sont soigneusement sélectionnés auprès des concessionnaires chaque marque et reconditionnés dans nos ateliers. Ainsi nous pouvons vous garantir la fiabilité de tous nos modèles mis en vente.
             </p>
