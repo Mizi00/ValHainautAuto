@@ -121,6 +121,7 @@ $header-height: 75px;
     background-color: $default-color;
     position: fixed;
     width: 100%;
+    z-index: 5;
     box-shadow: 0 .195rem 0.5rem 0px rgba(0, 0, 0, 0.281);
     //border-bottom: 1px solid black;
     transition: height .4s cubic-bezier(.68, -0.55, .27, 1.55);
