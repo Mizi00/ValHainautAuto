@@ -26,17 +26,49 @@
 
         .propos-text {
             display: flex;
-            flex-direction: row;
+            flex-direction: row-reverse;
             align-items: center;
             gap: 35px;
             max-width: 1250px;
             color: #858585;
             
+            @media screen and (max-width: 1024px) {
+                flex-direction: column;
+                gap: 100px;
+
+                img {
+                    max-width: 700px !important;
+                    height: 550px;
+                }
+
+                p {
+                    //text-align: center !important;
+                    padding: 0 25px;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                img {
+                    max-width: 400px !important;
+                    height: 400px !important;
+                    
+                }
+            }
+
+            @media screen and (max-width: 350px) {
+                margin: 0 !important;
+                img {
+                    max-width: none !important;
+                }
+
+            }
+
             img {
-                z-index: 0;
-                max-width: 600px;
+                object-fit: cover;
+                max-width: 500px;
                 width: 100%;
-                filter: contrast(70%);
+                opacity: 0.95;
+                //filter: contrast(70%);
                 
             }
 
