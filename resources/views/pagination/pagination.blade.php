@@ -1,6 +1,6 @@
 @if ($paginator->hasPages())
     <div class="pagination-container">
-        <div class="pagination-info">Affichage de {{ $paginator->firstItem() }} à {{ $paginator->lastItem() }} sur {{ $paginator->total() }} élément(s)</div>
+        <div class="pagination-info">Affichage {{ $paginator->firstItem() }} de {{ $paginator->lastItem() }} à {{ $paginator->total() }} élément(s)</div>
         <nav>
             <ul class="pagination">
                 {{-- Previous Page Link --}}
@@ -10,7 +10,7 @@
                     </li>
                 @else
                     <li class="page-item">
-                        <a class="page-link" href="{{ $paginator->previousPageUrl() }}" wire:click="previousPage" rel="prev">&laquo;</a>
+                        <a class="page-link" @click="scrollTo({top: 0, behavior: 'smooth'})" wire:click="previousPage" rel="prev">&laquo;</a>
                     </li>
                 @endif
 
@@ -27,7 +27,7 @@
                             @if ($page == $paginator->currentPage())
                                 <li class="page-item active" aria-current="page"><span class="page-link">{{ $page }}</span></li>
                             @else
-                                <li class="page-item"><a class="page-link" href="{{ url()->current().'?page='.$page }}">{{ $page }}</a></li>
+                                <li class="page-item"><a class="page-link" @click="scrollTo({top: 0, behavior: 'smooth'})" wire:click="gotoPage({{ $page }})">{{ $page }}</a></li>
                             @endif
                         @endforeach
                     @endif
@@ -36,7 +36,7 @@
                 {{-- Next Page Link --}}
                 @if ($paginator->hasMorePages())
                     <li class="page-item">
-                        <a class="page-link" wire:click="nextPage" href="{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a>
+                        <a class="page-link" @click="scrollTo({top: 0, behavior: 'smooth'})"  wire:click="nextPage" rel="next">&raquo;</a>
                     </li>
                 @else
                     <li class="page-item disabled" aria-disabled="true">
