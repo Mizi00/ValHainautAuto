@@ -6,6 +6,11 @@
             <span><i class="fas fa-envelope"></i>-  <p><a class="footer-contact" href="mailto:valhainaut.auto@yahoo.com">valhainaut.auto@yahoo.com</a></p></span>
             <span><i class="fas fa-map-marker-alt" id="pointer_map"></i>-  <p><a href="https://maps.app.goo.gl/qWoPthT6PsC4KABFA" target="_blank">64 Bis Av. du Fbg de Cambrai</a></p></span>
         </div>
+        <div class="contact-icon-phone">
+            <a href=""><i class="fas fa-phone"></i></a>
+            <a href=""><i class="fas fa-envelope"></i></a>
+            <a href=""><i class="fas fa-map-marker-alt" id="pointer_map"></i></a>
+        </div>
 
     </div>
     <div class="footer-inner-center">
