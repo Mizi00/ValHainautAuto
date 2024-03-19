@@ -17,8 +17,8 @@ class UserSeeder extends Seeder
         User::create([
             'id' => 1,
             'name' => 'admin',
-            'email' => 'admin@admin.fr',
-            'password' => Hash::make('root')
+            'email' => 'admin@valhainautauto.fr',
+            'password' => Hash::make('Valhainautauto@59Admin')
         ]);
     }
 }
