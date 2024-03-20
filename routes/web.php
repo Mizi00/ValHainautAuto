@@ -21,7 +21,7 @@ Route::view('/', 'index')->name('home');
 
 Route::prefix('/login')->middleware('guest')->group(function(){
     Route::get('/', [AuthController::class, 'index'])->name('login');
-    Route::post('/', [AuthController::class, 'authenticate'])->middleware('throttle:5,1');
+    Route::post('/', [AuthController::class, 'authenticate'])->middleware('throttle:5,2'); // pour les buit de force (num1 = nb de tentatives, num2 = Temps avants de re pouvoir tenter)
 });
 
 Route::middleware('auth')->group(function(){
@@ -40,7 +40,6 @@ Route::middleware('auth')->group(function(){
 
         Route::get('delete/{annonce}', 'delete')->name('delete');
 
-        
     });     
 
     Route::prefix('contact')->name('contact.')->controller(ContactController::class)->group(function(){
@@ -55,5 +54,5 @@ Route::middleware('auth')->group(function(){
 });
 Route::view('/mentions', 'client.mention')->name('mention');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
-Route::post('contact', [ContactController::class, 'validateContact']);
+Route::post('contact', [ContactController::class, 'validateContact'])->middleware('throttle:5,2');
 Route::get('voiture', [VoitureController::class, 'index'])->name('voiture'); 
