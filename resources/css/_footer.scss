@@ -37,10 +37,6 @@ footer {
                 }
             }
 
-            .contact-icon-phone {
-                display: none;
-            }
-
             @media screen and (max-width: 370px) {
                 .contact-icon {
                     display: none !important;
@@ -194,6 +190,10 @@ footer {
     .footer-inner-left {
         display: flex;
         flex-direction: column;
+
+        .contact-icon-phone {
+            display: none;
+        }
 
         .contact-icon {
             display: flex;
