@@ -1,14 +1,19 @@
 @extends('layouts.app')
 
 @section('contact')
-    <meta name="descrtion" name="Chez Val Hainaut Auto votre avis nous intéresse !">
+<meta name="descrtion" name="Chez Val Hainaut Auto votre avis nous intéresse !">
 @endsection
 
 @section('body')
 <x-navbar />
 <x-sidebar />
 <!--SECTION CONTACT-->
-
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    function onSubmit(token) {
+        document.getElementById("contactForm").submit();
+    }
+</script>
 <div class="contact">
     <h1>Contactez-Nous !</h1>
 
@@ -34,7 +39,7 @@
             </div>
             @endif
         </div>
-        <input type="submit" name="Envoyer" id="button">
+        <input type="submit" name="Envoyer" id="button" data-sitekey="{{ config('services.recaptcha_v3.siteKey') }}" data-callback="onSubmit" data-action="submitContact">
     </form>
 
 </div>
@@ -44,7 +49,8 @@
 <script>
     butterup.toast({
         title: 'Val Hainaut Auto',
-        message: '{{ session('success') }}',
+        message: '{{ session('
+        success ') }}',
         success: true,
         location: 'top-right',
         icon: true,
