@@ -3,6 +3,12 @@
 @section('body')
 <x-navbar />
 
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    function onSubmit(token) {
+        document.getElementById("contactForm").submit();
+    }
+</script>
 <div class="container-login">
     <div class="login">
         <h1>Connexion</h1>
@@ -16,7 +22,7 @@
             @error('password')
             <div>{{ $message }}</div>
             @enderror
-            <input type="submit" value="Connexion" id="button" name="button">
+            <input type="submit" value="Connexion" id="button" name="button" data-sitekey="{{ config('services.recaptcha_v3.siteKey') }}" data-callback="onSubmit" data-action="submitContact">
         </form>
     </div>
 </div>
