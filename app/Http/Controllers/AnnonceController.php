@@ -80,7 +80,7 @@ class AnnonceController extends Controller
             'typeFuel' => 'required',
             'url' => 'required|url',
             'vitesse' =>'required',
-            'img' => 'required|image|mimes:jpeg,png,jpg|max:5000'
+            'img' => 'image|mimes:jpeg,png,jpg|max:5000'
         ]);
 
 
@@ -94,7 +94,7 @@ class AnnonceController extends Controller
         }
 
         $credentials['idUser'] = auth()->user()->id;
-        $credentials['img'] = $imagePath;
+        $credentials['img'] = $imagePath ?? null;
         $credentials['created_at'] = Carbon::now();
 
         $annonce->insert($credentials);

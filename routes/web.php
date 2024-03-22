@@ -54,5 +54,5 @@ Route::middleware('auth')->group(function(){
 });
 Route::view('/mentions', 'client.mention')->name('mention');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
-Route::post('contact', [ContactController::class, 'validateContact'])->middleware('throttle:5,2');
+Route::post('contact', [ContactController::class, 'validateContact'])->name('valideContact')->middleware('throttle:5,2');
 Route::get('voiture', [VoitureController::class, 'index'])->name('voiture'); 

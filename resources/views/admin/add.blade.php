@@ -86,7 +86,7 @@
             <div class="div-form-container">
                 <div class="div-form">
                     <label for=""><i class="fa-solid fa-upload"></i> Choisir le fichier</label>
-                    <input type="file" name="img" accept="image/png, image/jpeg">
+                    <input type="file" name="img" accept="image/png, image/jpeg" required>
                 </div>
             </div>
             <div class="form-error">
