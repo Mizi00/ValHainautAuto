@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Fait toujours le suivi de ses clients. Vous êtes prioritaires.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     @yield('vehicule')
     @yield('contact')
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
