@@ -46,7 +46,7 @@ jobs:
     - name: Create Database
       run: |
         mkdir -p database
-        touch database/database.sqlite
+        touch database/database.mysql
 
     - name: Configure environment
       run: |
