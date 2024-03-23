@@ -24,7 +24,7 @@
                 <td>{{ $contact->numero }}</td>
                 <td>{{ Carbon\Carbon::parse($contact->created_at)->isoFormat('DD/MM/G à HH:mm')  }}</td>
                 <td>{{ $contact->message }}</td>
-                <td><a href="{{ route('contact.show', $contact->id) }}"><i class="fa-solid fa-comment"></i></a> <a href="{{ route('contact.delete', $contact->id) }}"><i class="fa-solid fa-trash"></i></a></td>
+                <td><a href="{{ route('contact.show', $contact->id) }}"><i class="fa-solid fa-comment"></i></a> <a href="{{ route('contact.delete', $contact->id) }}" onclick="return deleteConfirm();"><i class="fa-solid fa-trash"></i></a></td>
             </tr>
             @empty
             <tr>

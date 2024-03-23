@@ -33,4 +33,10 @@
 @endsection
 @endif
 
+<script>
+    function deleteConfirm(){
+        return confirm("Etes-vous sûre de supprimer ce message");
+    }
+</script>
+
 @endsection
