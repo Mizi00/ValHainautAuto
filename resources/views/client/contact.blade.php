@@ -49,8 +49,7 @@
 <script>
     butterup.toast({
         title: 'Val Hainaut Auto',
-        message: '{{ session('
-        success ') }}',
+        message: '{{ session('success') }}',
         success: true,
         location: 'top-right',
         icon: true,
