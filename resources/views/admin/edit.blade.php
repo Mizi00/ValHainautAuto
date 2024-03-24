@@ -47,14 +47,16 @@
                         </select>
                     </div>
                     <div class="div-form">
-                        <label for="">C.V:</label>
+                        <label for="">Puissance Fiscale:</label>
                         <select name="cv" id="">
                             <option value="{{ $annonce->cv }}">{{ $annonce->cv }}</option>
                             <option value="">-----</option>
-                            @for($i; $i<=100; $i++) @if($annonce->cv != $i)
-                                <option value="{{ $i }}">{{ $i }}</option>
+                            
+                            @for($i=1; $i<=30; $i++) 
+                                @if($annonce->cv != $i)
+                                    <option value="{{ $i }}">{{ $i }}</option>
                                 @endif
-                                @endfor
+                            @endfor
                         </select>
                     </div>
                 </div>
@@ -80,7 +82,7 @@
                         </select>
                     </div>
                     <div class="div-form">
-                        <label for="">Ch: </label>
+                        <label for="">Puissance DIN: </label>
                         <input type="number" min="0" name="ch" value="{{ $annonce->ch }}">
                     </div>
                 </div>

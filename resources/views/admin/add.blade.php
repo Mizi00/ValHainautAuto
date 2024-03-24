@@ -46,8 +46,9 @@
                     <label for="">Puissance Fiscale:</label>
                     <select name="cv" id="">
                         <option value="">---Selectionner---</option>
-                        @for($i=1; $i<=15; $i++) <option value="{{ $i }}" {{ old('cv') == $i ? 'selected' : '' }}>{{ $i }}</option>
-                            @endfor
+                        @for($i=1; $i<=30; $i++) 
+                            <option value="{{ $i }}" {{ old('cv') == $i ? 'selected' : '' }}>{{ $i }}</option>
+                        @endfor
                     </select>
                 </div>
             </div>
