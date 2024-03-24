@@ -54,9 +54,6 @@ jobs:
         echo "" >> .env
         echo "DB_DATABASE=database/database.sqlite" >> .env
         
-    - name: Display .env content
-      run: cat .env
-      
     - name: Display PHP version
       run: php --version
         
