@@ -50,6 +50,7 @@ jobs:
     - name: Configure environment
       run: |
         echo "DB_CONNECTION=sqlite" >> .env
+        echo "" >> .env
         echo "DB_DATABASE=database/database.sqlite" >> .env
 
     - name: Display PHP version
