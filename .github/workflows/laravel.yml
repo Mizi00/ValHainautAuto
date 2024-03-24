@@ -49,6 +49,7 @@ jobs:
 
     - name: Configure environment
       run: |
+        echo "" >> .env
         echo "DB_CONNECTION=sqlite" >> .env
         echo "" >> .env
         echo "DB_DATABASE=database/database.sqlite" >> .env
