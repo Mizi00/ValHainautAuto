@@ -1,4 +1,3 @@
-
 name: Laravel
 
 on:
@@ -46,7 +45,7 @@ jobs:
     - name: Create Database
       run: |
         mkdir -p database
-        touch database/database.mysql
+        touch database/database.sqlite
 
     - name: Configure environment
       run: |
@@ -57,7 +56,7 @@ jobs:
       run: php --version
         
     - name: Run Migrations
-      run: php artisan migrate --database=mysql
+      run: php artisan migrate --database=sqlite
       
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit
