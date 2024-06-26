@@ -15,7 +15,7 @@
     </div>
     <div class="footer-inner-center">
         <span></span>
-        <span>©Created By Toufik</span>
+        <span>©Created By <a class="toufik" target="_blank" href="https://portfolio.tboukichou.fr">Toufik</a></span>
         <span><a href="{{ route('mention') }}" target="_blank">mentions légales</a></span>
     </div>
     <div class="footer-inner-right">
