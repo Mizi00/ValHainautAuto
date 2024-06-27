@@ -52,6 +52,7 @@ Route::middleware('auth')->group(function(){
     Route::view('/stats', 'admin.stats')->name('stats');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
+Route::view('/reseaux', 'client.reseaux')->name('reseaux');
 Route::view('/mentions', 'client.mention')->name('mention');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact', [ContactController::class, 'validateContact'])->name('valideContact')->middleware('throttle:5,2');
